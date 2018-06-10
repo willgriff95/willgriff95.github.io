@@ -10,7 +10,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/app.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+  <script src="vendors/jquery.easings.min.js"></script>
+
+
+  <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+  <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
 </head>
 <body>
     <!-- <img class="profilePicture" src="./images/me.png" alt=""> -->
@@ -26,51 +37,11 @@
       </div>
     </div>
   </nav>
-
-  <div class="container aboutMe">
-    <div class="row">
-      <div class="col-5 fixed">
-        <h1>Who is</h1><h2> Will Griffiths?</h2>
-      </div>
-      <div class="col-5 ">
-      </div>
-      <div class="col-7">
-        Will Griffiths<br/>
-        —<br/>
-        I’m a web developer from London. I focus on front-end web development to bring the best experience to your users. Here is some of my work.<br/><br/>
-
-        I became a developer to positively affect social change. Technology has the potential to educate, transform the third sector and ensure transparency.<br/><br/>
-
-        I am fascinated by the power of technology in conjunction with education. I hope to build on the skills I have learnt as a teacher and make a full contribution to the team I am working with.<br/><br/>
-
-        In order to successfully work towards these goals, I want to learn as much as possible from the best in the next few years, whilst working on a wicked product.
-        <div class="carosel" id="carosel1">
-          <div class="fadedWhite"></div>
-          <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left" data-target="#carosel">
-            <i class="fa fa-angle-left"></i>
-          </a>
-          <div class="carosel-inner">
-            <img class="carosel-item" src="./images/1-01.svg" />
-            <img class="carosel-item" src="./images/1-02.svg" />
-            <img class="carosel-item" src="./images/1-03.svg" />
-            <img class="carosel-item" src="./images/1-04.svg" />
-            <img class="carosel-item" src="./images/1-05.svg" />
-            <img class="carosel-item" src="./images/1-06.svg" />
-            <img class="carosel-item" src="./images/1-07.svg" />
-            <img class="carosel-item" src="./images/1-08.svg" />
-            <img class="carosel-item" src="./images/1-09.svg" />
-          </div>
-          <div class="fadedWhite2"></div>
-          <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" data-target="#carosel"><i class="fa fa-angle-right"></i></a>
-        </div>
-      </div>
-      <div class="row experienceSectionImages">
-      </div>
-    </div>
-
-    <!-- <div class="row experienceSection"> -->
-    <div class="col-6">
-  </div>
+  <div id="fullpage">
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
+	<div class="section">Some section</div>
 </div>
 </body>
 </html>
