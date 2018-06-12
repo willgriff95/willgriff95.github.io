@@ -256,11 +256,12 @@ h2 {
   position: relative;
   /* top: 400px; */
   left: 0;
-  background-repeat: no-repeat;
+  background-color: #F4F3F0;
+  /* background-repeat: no-repeat; */
   width: 90%;
   color: black;
-  background-size: cover;
-  background-image: url("../images/fruitfrenzy-assets.jpg");
+  /* background-size: cover;
+  background-image: url("../images/fruitfrenzy-assets.jpg"); */
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56); }
@@ -388,26 +389,27 @@ h2 {
   z-index: 2000;
   display: none; }
 
-.foodlet {
-  height: 100%;
-  padding: 0 0 100px 100px;
-  /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
-  position: relative;
-  /* top: 400px; */
-  background-repeat: no-repeat;
-  width: 100%;
-  color: white;
-  background-color: #8CC63F;
-  -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
-  -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
-  box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 ); }
-
-.foodletHeroImage {
-  background-image: url("../images/Group 806.svg");
-  background-position: left;
-  background-size: cover; }
-
+  .foodlet {
+      height: 100%;
+      padding: 0 0 100px 100px;
+      /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
+      position: relative;
+      /* top: 400px; */
+      background-repeat: no-repeat;
+      width: 100%;
+      color: white;
+      background-color: #F0F4F2;
+      -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
+      -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
+      box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 );
+  }
+  .foodletHeroImage {
+      background-image: url(../images/foodletBG.svg);
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
 .foodletImage {
   vertical-align: middle;
   border-style: none;
@@ -445,22 +447,22 @@ h2 {
   margin-top: 30%;
   /* color: #696969; */ }
 
-.subHeaderFoodlet {
-  font-size: 10px;
-  font-weight: normal;
-  font-family: 'Circe';
-  letter-spacing: 3px;
-  margin-top: 30%;
-  color: darkgreen;
-  /* color: #696969; */ }
-
+  .subHeaderFoodlet {
+      font-size: 10px;
+      font-weight: normal;
+      font-family: 'Circe';
+      letter-spacing: 3px;
+      margin-top: 30%;
+      color: #8CC63F;
+      /* color: #696969; */
+  }
 .subHeaderFruitFrenzy {
   font-size: 10px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
   margin-top: 30%;
-  color: white;
+  color: #FDB500;
   /* color: #696969; */ }
 
 .subText {
