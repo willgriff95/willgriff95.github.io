@@ -6,7 +6,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.5px;
   line-height: 2em;
-  cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default;
+  /* cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default; */
 }
 
 .menuTransition {
