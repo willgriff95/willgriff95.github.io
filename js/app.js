@@ -27,7 +27,7 @@ $(function(){
     $(this).toggleClass('transition close');
     // $('.down-bg').slideToggle();
   });
-  const whoAmI = ['I\'m obsessed by digital products', 'I\'m obsessed by all things digital.', 'I love UI design.'];
+  const whoAmI = ['I\'m a web developer', 'I design & develop digital products.', 'I am UX enthusiast.', 'I design UI\'s for fun'];
   let counter = 0;
   setInterval(function() {
     $('.iAm').html(whoAmI[counter]);

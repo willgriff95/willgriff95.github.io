@@ -6,39 +6,43 @@ body {
   font-size: 14px;
   letter-spacing: 0.5px;
   line-height: 2em;
-  cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default; }
+  cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default;
+}
 
 .menuTransition {
   width: 100vw;
   height: 0;
-  background-color: red; }
-
-.pulse:hover,
-.pulse:focus {
-  -webkit-animation: pulse 0.7s;
-  animation: pulse 0.7s;
-  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0); }
-
-@-webkit-keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0  #67bdf1; } }
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0  #67bdf1; } }
-.pulse {
-  --color: #ef6eae;
-  --hover: #ef8f6e; }
-
+}
 .buttons {
-  display: inline; }
+  display: inline;
+  cursor:
+}
 
-button:hover, button:focus {
-  /* border-color:  #67bdf1; */
-  background-color: black;
-  color: white; }
 
-button {
+.pulseLinkedIn:hover,
+.pulseLinkedIn:focus {
+  -webkit-animation: pulse 0.7s;
+  animation: pulseLinkedIn 0.7s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulseLinkedIn {
+  0% {
+    box-shadow: 0 0 0 0 #0077B5; } }
+@keyframes pulseLinkedIn {
+  0% {
+    box-shadow: 0 0 0 0 #0077B5; } }
+
+
+.pulseLinkedIn:hover, .pulseLinkedIn:focus {
+  background-color: #0077B5;
+  color: white;
+  border: none;
+}
+
+.pulseLinkedIn {
   background: none;
+  color: #696969;
   /* border: 2px solid; */
   font: inherit;
   line-height: 1;
@@ -51,7 +55,147 @@ button {
   margin: 0.5em;
   /* padding: 1em 2em; */
   -webkit-transition: 0.25s;
-  transition: 0.25s; }
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+}
+
+
+.pulseTwitter:hover,
+.pulseTwitter:focus {
+  -webkit-animation: pulse 0.7s;
+  animation: pulseTwitter 0.7s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulseTwitter {
+  0% {
+    box-shadow: 0 0 0 0 #1DA1F2; } }
+@keyframes pulseTwitter {
+  0% {
+    box-shadow: 0 0 0 0 #1DA1F2; } }
+
+
+.pulseTwitter:hover, .pulseTwitter:focus {
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+}
+
+.pulseTwitter {
+  background: none;
+  color: #696969;
+  /* border: 2px solid; */
+  font: inherit;
+  line-height: 1;
+  /* color: white; */
+  padding-top: 5px;
+  height: 45px;
+  font-size: 20px;
+  width: 45px;
+  border-radius: 50px;
+  margin: 0.5em;
+  /* padding: 1em 2em; */
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+}
+
+.pulseEmail:hover,
+.pulseEmail:focus {
+  -webkit-animation: pulse 0.7s;
+  animation: pulseEmail 0.7s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulseEmail {
+  0% {
+    box-shadow: 0 0 0 0 #25d366; } }
+@keyframes pulseEmail {
+  0% {
+    box-shadow: 0 0 0 0 #25d366; } }
+
+
+.pulseEmail:hover, .pulseEmail:focus {
+  background-color: #25d366;
+  color: white;
+  border: none;
+}
+
+.pulseEmail {
+  background: none;
+  color: #696969;
+  /* border: 2px solid; */
+  font: inherit;
+  line-height: 1;
+  /* color: white; */
+  padding-top: 5px;
+  height: 45px;
+  font-size: 20px;
+  width: 45px;
+  border-radius: 50px;
+  margin: 0.5em;
+  /* padding: 1em 2em; */
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+}
+
+
+.pulseGithub:hover, .pulseGithub:focus {
+  background-color: #6e5494;
+  color: white;
+  border: none;
+}
+
+.pulseGithub {
+  background: none;
+  color: #696969;
+  /* border: 2px solid; */
+  font: inherit;
+  line-height: 1;
+  /* color: white; */
+  padding-top: 5px;
+  height: 45px;
+  font-size: 20px;
+  width: 45px;
+  border-radius: 50px;
+  margin: 0.5em;
+  /* padding: 1em 2em; */
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+}
+
+.pulseGithub:hover,
+.pulseGithub:focus {
+  -webkit-animation: pulse 0.7s;
+  animation: pulseGithub 0.7s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@-webkit-keyframes pulseGithub {
+  0% {
+    box-shadow: 0 0 0 0  #6e5494; } }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0  #6e5494; } }
+
 
 .whatIam {
   top: 30px;
@@ -128,7 +272,8 @@ h2 {
   position: relative;
   /* top: 400px; */
   left: 0;
-  background-color: #F7F7F7;
+  background-color: white;
+  /* background-color: #F7F7F7; */
   width: 90%;
   color: black;
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.56);
@@ -204,13 +349,23 @@ h2 {
   margin: 0 auto;
   background-color: rgba(240, 240, 241, 0.1); }
 
-.aboutMeImage {
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-image: url(../images/me.jpg); }
-
+  .aboutMeImage {
+      height: 70px;
+      width: 70px;
+      top: 25px;
+      margin: 0 0.5em;
+      position: relative;
+      border-radius: 50px;
+      border: solid 1px #F7F7F7;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-image: url(../images/me.jpg);
+      display: inline-block;
+      -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+      -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+      box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
+  }
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -269,7 +424,17 @@ h2 {
   font-family: 'Circe';
   letter-spacing: 3px;
   margin-top: 30%;
-  /* color: #696969; */ }
+  /* color: #696969; */
+}
+
+.subHeaderAboutME {
+  font-size: 10px;
+  font-weight: normal;
+  font-family: 'Circe';
+  letter-spacing: 3px;
+  margin-top: 15%;
+  /* color: #696969; */
+}
 
 .subHeaderShift {
   font-size: 10px;
@@ -313,7 +478,19 @@ h2 {
   letter-spacing: 0.5px;
   line-height: 24px;
   padding-bottom: 20px;
-  padding-top: 25px; }
+  padding-top: 25px;
+  color: #A9A9A9;
+}
+.contentWhite {
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: 'circe';
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  padding-bottom: 20px;
+  padding-top: 25px;
+  color: white;
+}
 
 .shiftLogo {
   width: 125px;
@@ -822,7 +999,7 @@ h2 {
       color: black;
       float: right;
       position: fixed;
-      right: 15px;
+      right: 0;
       z-index: 1000;
   }
 .main-item {
@@ -1191,17 +1368,16 @@ h2 {
   }
 
   .cd-overlay-nav, .cd-overlay-content {
-    /* containers of the 2 main rounded backgrounds - these containers are used to position the rounded bgs behind the menu icon */
-    position: fixed;
-    top: 18px;
-    right: 5%;
-    height: 4px;
-    width: 4px;
-    -webkit-transform: translateX(-20px) translateY(20px);
-    -moz-transform: translateX(-20px) translateY(20px);
-    -ms-transform: translateX(-20px) translateY(20px);
-    -o-transform: translateX(-20px) translateY(20px);
-    transform: translateX(-20px) translateY(20px);
+      position: fixed;
+      top: 14px;
+      right: 3%;
+      height: 4px;
+      width: 4px;
+      -webkit-transform: translateX(-20px) translateY(20px);
+      -moz-transform: translateX(-20px) translateY(20px);
+      -ms-transform: translateX(-20px) translateY(20px);
+      -o-transform: translateX(-20px) translateY(20px);
+      transform: translateX(-20px) translateY(20px);
   }
   .cd-overlay-nav span, .cd-overlay-content span {
     display: inline-block;
@@ -1336,7 +1512,8 @@ body, .onepage-wrapper, html {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(0,0,0,0.85);
+  background-color: lightGray;
+  /* background: rgba(0,0,0,0.85); */
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -1346,9 +1523,11 @@ body, .onepage-wrapper, html {
   width: 10px;
   height: 10px;
   background: none;
-  border: 1px solid black;
+  border: 1px solid lightGray;
   margin-top: -4px;
   left: 8px;
+  /* background-color: white; */
+
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
@@ -1375,4 +1554,8 @@ body, .onepage-wrapper, html {
 
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
+}
+p {
+    margin-top: 30px;
+    margin-bottom: 1rem;
 }
