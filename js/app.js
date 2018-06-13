@@ -37,8 +37,6 @@ $(function(){
     return counter ++;
   }, 4000);
 
-
-
   //inizialize navigation and content layers
   layerInit();
   $(window).on('resize', function(){
