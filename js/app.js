@@ -18,10 +18,12 @@ $(function(){
   $('.carosel-control-right').click(function() {
     $(this).blur();
     $(this).parent().find('.carosel-item').first().insertAfter($(this).parent().find('.carosel-item').last());
+    // $(this).parent().find('.technologyName').first().insertAfter($(this).parent().find('.technologyName').last());
   });
   $('.carosel-control-left').click(function() {
     $(this).blur();
     $(this).parent().find('.carosel-item').last().insertBefore($(this).parent().find('.carosel-item').first());
+    // $(this).parent().find('.technologyName').last().insertBefore($(this).parent().find('.technologyName').first());
   });
   $('.menu').click(function(){
     $(this).toggleClass('transition close');

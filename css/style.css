@@ -455,7 +455,19 @@ h2 {
     font-weight: normal;
     font-family: 'Circe';
     letter-spacing: 3px;
-    margin-top: 10%;
+    margin-top: 16%;
+}
+
+.technologyName {
+    display: inline-block;
+    color: white;
+    position: relative;
+    bottom: 0;
+    font-size: 10px;
+    width: 70px;
+    bottom: -20px;
+    left: -60px;
+    text-transform: none;
 }
 .subHeaderContactME {
     font-size: 10px;
@@ -582,11 +594,24 @@ h2 {
   /* top: 40px;  */
 }
 
+/* @media (max-width: 300px) {
+  .technologyName {
+    width: 100%; } }
+@media (min-width: 300px) {
+  .technologyName {
+    width: 50%; } }
+@media (min-width: 500px) {
+  .technologyName {
+    width: 33.333%; } }
+@media (min-width: 768px) {
+  .technologyName {
+    width: 25%; } } */
+
 .carosel-inner {
     white-space: nowrap;
     overflow: hidden;
     font-size: 0;
-    height: 30px;
+    height: 60px;
 }
 .carosel-item {
   display: inline-block;
@@ -594,6 +619,8 @@ h2 {
   color: white;
   text-align: center;
   font-size: 30px;
+  justify-content: center;
+
 }
 
 .experienceSection {
