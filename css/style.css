@@ -218,17 +218,16 @@ body {
   position: relative; }
 
 h1 {
-  color: black;
-  font-size: 55px;
-  display: inline; }
-
-h2 {
   color: #707070;
   font-size: 55px;
   display: inline; }
 
-.iAm {
+h2 {
   color: black;
+  font-size: 55px;
+  display: inline; }
+
+.iAm {
   font-size: 45px;
   display: inline; }
 
@@ -359,7 +358,7 @@ h2 {
       margin: 0 0.5em;
       position: relative;
       border-radius: 50px;
-      border: solid 1px #F7F7F7;
+      /* border: solid 1px #F7F7F7; */
       background-size: cover;
       background-position: top;
       background-repeat: no-repeat;
@@ -532,7 +531,8 @@ h2 {
 .carosel {
   position: relative;
   color: white;
-  top: 40px; }
+  /* top: 40px;  */
+}
 
 .carosel-inner {
   white-space: nowrap;
@@ -904,6 +904,42 @@ h2 {
   text-align: center;
   background: linear-gradient(to right, rgba(0, 0, 0, 0), white); }
 
+.fadedGrey {
+  height: 100%;
+  /* top: -10px; */
+  width: 50%;
+  position: absolute;
+  background: linear-gradient(to right, #F4F0F1, rgba(0, 0, 0, 0)); }
+
+.fadedGrey2 {
+  height: 100%;
+  float: right;
+  top: 0;
+  right: 0;
+  width: 50%;
+  position: absolute;
+  text-align: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #F4F0F1); }
+
+  .fadedGreen {
+    height: 100%;
+    /* top: -10px; */
+    width: 50%;
+    position: absolute;
+    background: linear-gradient(to right, #8bc63f, rgba(0, 0, 0, 0));
+  }
+
+  .fadedGreen2 {
+      height: 100%;
+      float: right;
+      top: 0;
+      right: 0;
+      width: 50%;
+      position: absolute;
+      text-align: center;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), #8bc63f);
+  }
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -919,8 +955,8 @@ h2 {
   top: 50%;
   width: 30px;
   height: 30px;
-  background-color: #F8F8F8;
-  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  background-color: none;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0);
   transform: translateY(-50%);
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.5);
@@ -1526,7 +1562,7 @@ body, .onepage-wrapper, html {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: lightGray;
+  background-color: black;
   /* background: rgba(0,0,0,0.85); */
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1537,7 +1573,7 @@ body, .onepage-wrapper, html {
   width: 10px;
   height: 10px;
   background: none;
-  border: 1px solid lightGray;
+  border: 1px solid black;
   margin-top: -4px;
   left: 8px;
   /* background-color: white; */
