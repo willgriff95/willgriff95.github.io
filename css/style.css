@@ -25,11 +25,11 @@ body {
   /* top: 400px; */
   /* left: 0; */
   background-color: #F4F3F0;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   width: 100%;
   color: black;
-  /* background-size: cover;
-  background-image: url("../images/fruitfrenzy-assets.jpg"); */
+  background-size: cover;
+  background-image: url("../images/fruitfrenzy-assets.jpg");
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
@@ -400,14 +400,14 @@ h2 {
       background-repeat: no-repeat;
       width: 100%;
       color: white;
-      background-color: #F0F4F2;
+      background-color: #8CC63F;
       -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
       -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
       box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 );
   }
   .foodletHeroImage {
-      background-image: url(../images/foodletBG.svg);
+      background-image: url('../images/Group 806.svg');
       background-position: left;
       background-size: contain;
       background-repeat: no-repeat;
@@ -455,7 +455,7 @@ h2 {
       font-family: 'Circe';
       letter-spacing: 3px;
       margin-top: 30%;
-      color: #8CC63F;
+      color: white;
       /* color: #696969; */
   }
 .subHeaderFruitFrenzy {
@@ -464,7 +464,7 @@ h2 {
   font-family: 'Circe';
   letter-spacing: 3px;
   margin-top: 30%;
-  color: #FDB500;
+  color: white;
   /* color: #696969; */ }
 
 .subText {
@@ -484,6 +484,16 @@ h2 {
   padding-bottom: 20px;
   padding-top: 25px;
   color: #A9A9A9;
+}
+.contentBlack {
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: 'circe';
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  padding-bottom: 20px;
+  padding-top: 25px;
+  color: black;
 }
 .contentWhite {
   font-size: 12px;
