@@ -19,10 +19,11 @@ $(function(){
       scaleY: 0,
       translateZ: 0
     }, 50).velocity({
-      height: diameterValue+'px',
-      width: diameterValue+'px',
-      top: -(diameterValue/2)+'px',
-      left: -(diameterValue/2)+'px'
+      height: '550'+'px',
+      width: '550'+'px',
+      top: '-250px',
+      right: '-350px',
+      opacity: '0.95'
     }, 0);
 
     overlayContent.children('span').velocity({
@@ -30,10 +31,10 @@ $(function(){
       scaleY: 0,
       translateZ: 0
     }, 50).velocity({
-      height: diameterValue+'px',
-      width: diameterValue+'px',
-      top: -(diameterValue/2)+'px',
-      left: -(diameterValue/2)+'px'
+      height: '550'+'px',
+      width: '550'+'px',
+      top: '-250px',
+      right: '-350px'
     }, 0);
   }
 

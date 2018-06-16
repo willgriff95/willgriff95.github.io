@@ -1192,7 +1192,8 @@ h2 {
       color: black;
       float: right;
       position: fixed;
-      right: 0;
+      right: 10px;
+      top: 25px;
       z-index: 1000;
   }
   .main-item {
@@ -1244,7 +1245,8 @@ h2 {
   transition-timing-function: ease-in;
   -webkit-box-shadow: 0px 155px 100px 0px rgba(50, 50, 50, 0.2);
   -moz-box-shadow: 0px 155px 100px 0px rgba(50, 50, 50, 0.2);
-  box-shadow: 0px 155px 100px 0px rgba(50, 50, 50, 0.2); }
+  box-shadow: 0px 155px 100px 0px rgba(50, 50, 50, 0.2);
+}
 
 .down-bg .social-menu ul.menu-social {
   float: left;
@@ -1504,23 +1506,28 @@ h2 {
   font-size: 35px;
 
 }
-
-  .cd-primary-nav {
-      position: fixed;
-      left: 0;
-      top: -5px;
-      height: 102%;
-      width: 100%;
-      padding: 80px 5%;
-      z-index: 3;
-      background-color: #E6E6E6;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      visibility: hidden;
-      opacity: 0;
-      -webkit-transition: visibility 0s, opacity 0.3s;
-      -moz-transition: visibility 0s, opacity 0.3s;
-      transition: visibility 0s, opacity 0.3s;
+.cd-primary-nav {
+    position: fixed;
+    border-radius: 20px;
+    right: 0;
+    top: -5px;
+    height: 40%;
+    /* width: 200px; */
+    margin: 20px;
+    /* padding: 80px 5%; */
+    z-index: 3;
+    /* background-color: #E6E6E6; */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s, opacity 0.3s;
+    -moz-transition: visibility 0s, opacity 0.3s;
+    transition: visibility 0s, opacity 0.3s;
+    transition-timing-function: ease-in;
+    /* -webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,0.10);
+    -moz-box-shadow:0 2px 4px 0 rgba(0,0,0,0.10);
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.10); */
   }
   .cd-primary-nav li {
     margin: 1.6em 0;
@@ -1547,7 +1554,7 @@ h2 {
   }
   @media only screen and (min-width: 768px) {
     .cd-primary-nav li {
-      margin: 2em 0;
+      /* margin: 2em 0; */
     }
     .cd-primary-nav a {
         font-size: 30px;
@@ -1555,7 +1562,7 @@ h2 {
         letter-spacing: 0px;
         color: #7C7C7C;
         /* font-size: 1.75rem; */
-        margin: 40px;
+        /* margin: 40px; */
     }
   }
   .emailLink{
@@ -1563,7 +1570,7 @@ h2 {
   }
   @media only screen and (min-width: 1170px) {
     .cd-primary-nav li {
-      margin: 2.6em 0;
+      /* margin: 2.6em 0; */
     }
     .cd-primary-nav a {
         font-size: 40px;
@@ -1572,7 +1579,7 @@ h2 {
         letter-spacing: 0px;
         color: #7C7C7C;
         /* font-size: 1.75rem; */
-        margin: 40px 40px 40px 40px;
+        /* margin: 40px 40px 40px 40px; */
     }
   }
   .contactMenu {
@@ -1621,6 +1628,9 @@ h2 {
     -ms-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
+    /* -webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,0.10);
+    -moz-box-shadow:0 2px 4px 0 rgba(0,0,0,0.10);
+    box-shadow:0 2px 4px 0 rgba(0,0,0,0.10); */
   }
   .cd-overlay-nav.is-hidden, .cd-overlay-content.is-hidden {
     /* background fades out at the end of the animation */
@@ -1636,7 +1646,7 @@ h2 {
     z-index: 2;
   }
   .cd-overlay-nav span {
-    background-color: #F8F8F8;
+    background-color: white;
 }
 
   .cd-overlay-content {
@@ -1710,111 +1720,120 @@ body, .onepage-wrapper, html {
     position: absolute;
     right: 0;
     /* top: 40%; */
+    width: 100%;
     z-index: 1;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+/* .navbar{
+    height: 400px;
+    width: 200px;
+    top: 0px;
+    right: 0px;
+    transform: scaleX(1) scaleY(1);
+} */
 
 .onepage-pagination li {
   padding: 0;
   text-align: center;
 }
-.onepage-pagination li a{
-  padding: 10px;
-  width: 4px;
-  height: 4px;
-  display: block;
-
+.onepage-pagination li a {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 a[data-index="1"]:before {
   content: 'HOME'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 a[data-index="2"]:before {
   content: 'SHIFT'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 a[data-index="3"]:before {
   content: 'FOODLET'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 a[data-index="4"]:before {
   content: 'Fruit Frenzy'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 a[data-index="4"]:before {
   content: 'FRUIT FRENZY'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 a[data-index="5"]:before {
   content: 'ABOUT ME'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 a[data-index="6"]:before {
   content: 'CONTACT ME'!important;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
-  color: black;
+  /* margin-top: 30%; */
+  color: #7C7C7C;
 }
 
 .onepage-pagination li a:before {
     content: 'hello';
     position: absolute;
-    width: 90px;
-    right: 0;
+    width: 100%;
+    left: 30px;
     text-align: left;
     height: 1px;
-    background-color: black;
+    /* background-color: black; */
     /* background: rgba(0,0,0,0.85); */
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
 }
 .onepage-pagination li a.active:before {
-    width: 100px;
+    width: 100%;
     font-weight: bold;
     height: 1px;
     background: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* margin-top: -4px; */
-    right: 0;
+    left: 30px;
+    color: black;
     /* background-color: white; */
+    font-size: 9px;
 }
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
   overflow: auto;
