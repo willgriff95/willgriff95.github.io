@@ -1,14 +1,41 @@
 $(function(){
+
+  var overlayNav = $('.cd-overlay-nav'),
+    overlayContent = $('.cd-overlay-content'),
+    navigation = $('.cd-primary-nav'),
+    toggleNav = $('.burgerMenuTrigger');
+
+
   $('.main').onepage_scroll({
     sectionContainer: 'section',
     responsiveFallback: 600,
     loop: true
   });
 
-  var overlayNav = $('.cd-overlay-nav'),
-    overlayContent = $('.cd-overlay-content'),
-    navigation = $('.cd-primary-nav'),
-    toggleNav = $('.burgerMenuTrigger');
+  function layerInit(){
+    var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
+    overlayNav.children('span').velocity({
+      scaleX: 0,
+      scaleY: 0,
+      translateZ: 0
+    }, 50).velocity({
+      height: diameterValue+'px',
+      width: diameterValue+'px',
+      top: -(diameterValue/2)+'px',
+      left: -(diameterValue/2)+'px'
+    }, 0);
+
+    overlayContent.children('span').velocity({
+      scaleX: 0,
+      scaleY: 0,
+      translateZ: 0
+    }, 50).velocity({
+      height: diameterValue+'px',
+      width: diameterValue+'px',
+      top: -(diameterValue/2)+'px',
+      left: -(diameterValue/2)+'px'
+    }, 0);
+  }
 
 
   $('.to-the-top').click(function() {
@@ -96,30 +123,6 @@ $(function(){
       });
     }
   });
-  function layerInit(){
-    var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
-    overlayNav.children('span').velocity({
-      scaleX: 0,
-      scaleY: 0,
-      translateZ: 0
-    }, 50).velocity({
-      height: diameterValue+'px',
-      width: diameterValue+'px',
-      top: -(diameterValue/2)+'px',
-      left: -(diameterValue/2)+'px'
-    }, 0);
-
-    overlayContent.children('span').velocity({
-      scaleX: 0,
-      scaleY: 0,
-      translateZ: 0
-    }, 50).velocity({
-      height: diameterValue+'px',
-      width: diameterValue+'px',
-      top: -(diameterValue/2)+'px',
-      left: -(diameterValue/2)+'px'
-    }, 0);
-  }
 
 
 
