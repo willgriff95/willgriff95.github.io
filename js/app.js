@@ -19,11 +19,12 @@ $(function(){
       scaleY: 0,
       translateZ: 0
     }, 50).velocity({
-      height: '550'+'px',
-      width: '550'+'px',
+      height: '1000px',
+      width: '500px',
+      // border-radius: '0',
       top: '-250px',
       right: '-350px'
-      // opacity: '0.2'
+      // transform: scaleX(1) scaleY(1);
     }, 0);
 
     overlayContent.children('span').velocity({
@@ -31,10 +32,12 @@ $(function(){
       scaleY: 0,
       translateZ: 0
     }, 50).velocity({
-      height: '550'+'px',
-      width: '550'+'px',
+      height: '1000px',
+      width: '500px',
+      // border-radius: '0',
       top: '-250px',
       right: '-350px'
+      // transform: scaleX(1) scaleY(1);
     }, 0);
   }
 
