@@ -22,8 +22,8 @@ $(function(){
       height: '550'+'px',
       width: '550'+'px',
       top: '-250px',
-      right: '-350px',
-      opacity: '0.95'
+      right: '-350px'
+      // opacity: '0.2'
     }, 0);
 
     overlayContent.children('span').velocity({
