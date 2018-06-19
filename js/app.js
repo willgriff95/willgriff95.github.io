@@ -1,19 +1,21 @@
 $(function(){
-
+  AOS.init({
+    duration: 1200,
+  });
   var overlayNav = $('.cd-overlay-nav'),
     overlayContent = $('.cd-overlay-content'),
     navigation = $('.cd-primary-nav'),
     toggleNav = $('.burgerMenuTrigger');
 
 
-  $('.main').onepage_scroll({
-    sectionContainer: 'section',
-    responsiveFallback: 600,
-    loop: true
-  });
+  // $('.main').onepage_scroll({
+  //   sectionContainer: 'section',
+  //   responsiveFallback: 600,
+  //   loop: true
+  // });
 
   function layerInit(){
-    var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
+    // var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
     overlayNav.children('span').velocity({
       scaleX: 0,
       scaleY: 0,
@@ -21,8 +23,8 @@ $(function(){
     }, 50).velocity({
       height: '1000px',
       width: '500px',
-      // border-radius: '0',
       top: '-250px',
+      // border-radius: '0',
       right: '-350px'
       // transform: scaleX(1) scaleY(1);
     }, 0);

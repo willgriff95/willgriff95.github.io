@@ -8,6 +8,7 @@ body {
   line-height: 2em;
   /* cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default; */
 }
+
 .NavbarText {
     font-size: 10px;
     /* color: #6BA4F5; */
@@ -262,15 +263,17 @@ h2 {
   right: -1px; }
 
 .shift {
+  background-image: url('../images/iphone-shift3.svg');
   height: 100vh;
   padding: 0 0 100px 100px;
   /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
   position: relative;
   /* top: 400px; */
-  background-repeat: no-repeat;
   width: 100%;
-  color: black;
-  background: #F4F0F1;
+  color: white !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
@@ -360,7 +363,7 @@ h2 {
 .shiftLink {
   text-decoration: none;
   height: 100%;
-  background-image: url("../images/iphone.svg");
+  background-image: url("../images/iphone.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -375,7 +378,7 @@ h2 {
 .shiftLink:hover {
   text-decoration: none;
   height: 100%;
-  background-image: url("../images/iphone.svg");
+  background-image: url("../images/iphone.png");
   background-position: center;
   background-size: contain;
   /* position: absolute; */
@@ -427,11 +430,14 @@ h2 {
 
   .foodlet {
       height: 100%;
-      padding: 0 0 100px 100px;
+      padding: 0 100px 100px 0;
       /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
       position: relative;
       /* top: 400px; */
       background-repeat: no-repeat;
+      background-image: url('../images/foodlet-background.svg');
+      background-size: cover;
+      background-position: center;
       width: 100%;
       color: white;
       background-color: #8CC63F;
@@ -440,8 +446,32 @@ h2 {
       box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 );
   }
+  .revu {
+      height: 100%;
+      padding: 0 100px 100px 0;
+      /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
+      position: relative;
+      /* top: 400px; */
+      background-repeat: no-repeat;
+      background-image: url('../images/revuBackground.svg');
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      color: white;
+      background-color: #171717;
+      -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
+      -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
+      box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 );
+  }
   .foodletHeroImage {
-      background-image: url('../images/Group 806.svg');
+      background-image: url('../images/iphone-screens.svg');
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  .revuHeroImage {
+      background-image: url('../images/revulaptop.svg');
       background-position: left;
       background-size: contain;
       background-repeat: no-repeat;
@@ -514,7 +544,7 @@ h2 {
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
-  margin-top: 30%;
+  margin-top: 10%;
   /* color: #696969; */ }
   .subHeaderFoodlet {
       font-size: 10px;
@@ -534,13 +564,15 @@ h2 {
   color: white;
   /* color: #696969; */ }
 
-.subText {
-  font-size: 25px;
-  font-weight: lighter;
-  font-family: 'circe';
-  line-height: 1.5em;
-  padding-top: 20px;
-  /* letter-spacing: 3px; */ }
+  .subText {
+      font-size: 25px;
+      font-weight: 400;
+      font-family: 'circe';
+      line-height: 1.5em;
+      padding-top: 20px;
+      color: grey;
+      /* letter-spacing: 3px; */
+  }
   .name {
       font-size: 13px;
       font-weight: 700;
@@ -1650,6 +1682,7 @@ h2 {
     z-index: 2;
   }
   .cd-overlay-nav span {
+      opacity: 0.4;
       background-color: #F7F7F7;
   }
 
@@ -1658,7 +1691,8 @@ h2 {
     z-index: 4;
   }
   .cd-overlay-content span {
-    background-color: white;
+    opacity: 0.4;
+    background-color: #F7F7F7;
   }
 
   .cd-content {
@@ -1731,13 +1765,9 @@ body, .onepage-wrapper, html {
     padding: 0;
 }
 
-/* .navbar{
-    height: 400px;
-    width: 200px;
-    top: 0px;
-    right: 0px;
-    transform: scaleX(1) scaleY(1);
-} */
+.navbar{
+  border-radius: 0;
+}
 
 .onepage-pagination li {
   padding: 0;
