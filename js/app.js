@@ -20,6 +20,7 @@ $(function(){
     obj.preLoad=true;
     obj.play();
   }
+
   // $('.main').onepage_scroll({
   //   sectionContainer: 'section',
   //   responsiveFallback: 600,
