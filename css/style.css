@@ -9,6 +9,50 @@ body {
   /* cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default; */
 }
 
+.revuURLLink{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.revuURLLink:hover{
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.shiftURLLink{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.shiftURLLink:hover{
+  color: lightBlue;
+  font-weight: bold;
+  cursor: pointer;
+}
+.foodletURLLink{
+  font-size: 20px;
+  color:  white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.foodletURLLink:hover{
+  color: greenyellow;
+  font-weight: bold;
+  cursor: pointer;
+}
+.fruitFrenzyURLLink{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.fruitFrenzyURLLink:hover{
+  color: #f9c809;
+  font-weight: bold;
+  cursor: pointer;
+}
 .NavbarText {
     font-size: 10px;
     /* color: #6BA4F5; */
@@ -33,7 +77,7 @@ a:hover {
 }
 .fruitFrenzy2 {
   height: 100vh;
-  padding: 0 0 100px 100px;
+  padding: 0 100px 100px 0;
   /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
   position: relative;
   /* top: 400px; */
@@ -41,9 +85,9 @@ a:hover {
   background-color: #F4F3F0;
   background-repeat: no-repeat;
   width: 100%;
-  color: black;
+  color: white;
   background-size: cover;
-  background-image: url("../images/fruitfrenzy-assets.jpg");
+  background-image: url("../images/fruitfrenzy-background.svg");
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
@@ -243,10 +287,10 @@ h2 {
   font-size: 55px;
   display: inline; }
 
-.iAm {
-  font-size: 45px;
-  display: inline; }
-
+  .iAm {
+      font-size: 45px;
+      display: block;
+  }
 .hi {
   position: relative;
   /* top: 300px; */ }
@@ -353,7 +397,7 @@ h2 {
   text-decoration: none;
   height: 100%;
   color: white;
-  background-image: url(../images/ipad.svg);
+  background-image: url(../images/fruitFrenzyRespo.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -387,7 +431,8 @@ h2 {
   color: white;
   /* z-index: 1000; */
   margin: 0 auto;
-  background-color: rgba(240, 240, 241, 0.1); }
+  /* background-color: rgba(240, 240, 241, 0.1);  */
+}
 
   .aboutMeImage {
       height: 70px;
@@ -509,10 +554,10 @@ h2 {
     position: relative;
     bottom: 0;
     font-size: 10px;
-    width: 70px;
-    top: 30px;
+    width: 100%;
+    /* top: 30px; */
     line-height: 1em;
-    left: -80px;
+    /* left: -100px; */
     text-transform: none;
 }
 .technologyNameShift {
@@ -615,16 +660,15 @@ h2 {
   color: black;
 }
 .contentWhite {
-  font-size: 12px;
-  font-weight: lighter;
-  font-family: 'circe';
-  letter-spacing: 0.5px;
-  line-height: 24px;
-  padding-bottom: 20px;
-  padding-top: 25px;
-  color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'circe';
+    letter-spacing: px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    padding-top: 25px;
+    color: white;
 }
-
 .shiftLogo {
   width: 125px;
   top: 100px;
@@ -636,18 +680,54 @@ h2 {
 .bg-light {
   background: none !important; }
 
+  /* [class^="icon-"]:before, [class*=" icon-"]:before {
+      width: 100%;
+      font-family: "technology-icons";
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+      font-weight: normal;
+      font-style: normal;
+      speak: none;
+      text-decoration: inherit;
+      text-transform: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  } */
+
 @media (max-width: 300px) {
   .carosel-item {
-    width: 100%; } }
+    width: 100%;
+  }
+  .carosel-itemFruitFrenzy{
+    width: 33.333%;
+  }
+  }
 @media (min-width: 300px) {
   .carosel-item {
-    width: 50%; } }
+    width: 50%;
+  }
+  .carosel-itemFruitFrenzy{
+    width: 33.333%;
+  }
+  }
 @media (min-width: 500px) {
   .carosel-item {
-    width: 33.333%; } }
+    width: 33.333%;
+  }
+  .carosel-itemFruitFrenzy{
+    width: 33.333%;
+  }
+  }
 @media (min-width: 768px) {
   .carosel-item {
-    width: 25%; } }
+    width: 25%;
+  }
+  .carosel-itemFruitFrenzy{
+    width: 33.333%;
+  }
+  }
 .carosel {
   position: relative;
   /* color: black; */
@@ -685,6 +765,15 @@ h2 {
     height: 40px;
 }
 .carosel-item {
+  display: inline-block;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  justify-content: center;
+
+}
+.carosel-itemFruitFrenzy{
   display: inline-block;
   height: 100%;
   color: white;
@@ -1111,8 +1200,8 @@ h2 {
 .carosel-control {
   position: absolute;
   top: 50%;
-  width: 30px;
-  height: 30px;
+  /* width: 30px; */
+  /* height: 30px; */
   background-color: none;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0);
   transform: translateY(-50%);
@@ -1138,12 +1227,18 @@ h2 {
 }
 
 .carosel-control-left {
-  left: 0;
-  padding: 0px 1px 1px 12px; }
+    left: 0;
+    top: 20px;
+    position: relative;
 
+    /* padding: 0px 1px 1px 12px; */
+}
 .carosel-control-right {
-  right: 0;
-  padding: 0px 1px 1px 12px; }
+      float: right;
+      right: 15px;
+      position: relative;
+      top: -47px;
+  }
 
 .carosel-control:active,
 .carosel-control:hover {
@@ -1924,6 +2019,7 @@ p {
 	font-weight:normal;
 	font-style:normal;
 	speak:none;
+  width: 100%;
 	text-decoration:inherit;
 	text-transform:none;
 	text-rendering:optimizeLegibility;
@@ -1935,575 +2031,575 @@ p {
 /* Icons */
 .icon-aftereffects:before {
 	content:"\f101";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-bridge:before {
 	content:"\f102";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-dreamweaver:before {
 	content:"\f103";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-fireworks:before {
 	content:"\f104";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-flash:before {
 	content:"\f105";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-illustrator:before {
 	content:"\f106";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-indesign:before {
 	content:"\f107";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-lightroom:before {
 	content:"\f108";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-photoshop:before {
 	content:"\f109";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-cockpit:before {
 	content:"\f10a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-drupal:before {
 	content:"\f10b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-joomla:before {
 	content:"\f10c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-magento:before {
 	content:"\f10d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-october:before {
 	content:"\f10e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-wordpress:before {
 	content:"\f10f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-visual-studio:before {
 	content:"\f110";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-bootstrap:before {
 	content:"\f111";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-emmet:before {
 	content:"\f112";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-less:before {
 	content:"\f113";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-postcss:before {
 	content:"\f114";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-sass:before {
 	content:"\f115";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-cassandra:before {
 	content:"\f116";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-database:before {
 	content:"\f117";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-hadoop:before {
 	content:"\f118";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-mariadb:before {
 	content:"\f119";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-mongodb:before {
 	content:"\f11a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-mysql-alt:before {
 	content:"\f11b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-mysql:before {
 	content:"\f11c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-postgres:before {
 	content:"\f11d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-sql:before {
 	content:"\f11e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-sublime:before {
 	content:"\f11f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-express:before {
 	content:"\f120";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-grails:before {
 	content:"\f121";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-grailsalt:before {
 	content:"\f122";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-laravel-alt:before {
 	content:"\f123";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-laravel:before {
 	content:"\f124";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-phonegap:before {
 	content:"\f125";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-platter:before {
 	content:"\f126";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-playframework:before {
 	content:"\f127";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-rails-alt:before {
 	content:"\f128";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-rails:before {
 	content:"\f129";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-jira-alt:before {
 	content:"\f12a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-jira:before {
 	content:"\f12b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-angular:before {
 	content:"\f12c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-backbone:before {
 	content:"\f12d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-d3:before {
 	content:"\f12e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-ember:before {
 	content:"\f12f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-jquery-alt:before {
 	content:"\f130";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-jquery:before {
 	content:"\f131";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-react:before {
 	content:"\f132";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-c:before {
 	content:"\f133";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-cplusplus:before {
 	content:"\f134";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-csharp:before {
 	content:"\f135";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-haskell:before {
 	content:"\f136";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-java:before {
 	content:"\f137";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-nodejs:before {
 	content:"\f138";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-objectivec:before {
 	content:"\f139";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-perl:before {
 	content:"\f13a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-php-alt:before {
 	content:"\f13b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-php:before {
 	content:"\f13c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-python:before {
 	content:"\f13d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-ruby:before {
 	content:"\f13e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-scala:before {
 	content:"\f13f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-debian:before {
 	content:"\f140";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-fedora:before {
 	content:"\f141";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-freebsd:before {
 	content:"\f142";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-gnome:before {
 	content:"\f143";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-java-duke:before {
 	content:"\f144";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-kde:before {
 	content:"\f145";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-linux-mint:before {
 	content:"\f146";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-netbsd:before {
 	content:"\f147";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-rasbaerrypi:before {
 	content:"\f148";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-redhat:before {
 	content:"\f149";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-solaris:before {
 	content:"\f14a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-suse:before {
 	content:"\f14b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-ubuntu:before {
 	content:"\f14c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-autoit:before {
 	content:"\f14d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-browsersync:before {
 	content:"\f14e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-confluence:before {
 	content:"\f14f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-dynamicweb:before {
 	content:"\f150";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-babel:before {
 	content:"\f151";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-webpack:before {
 	content:"\f152";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-osx:before {
 	content:"\f153";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-codeignitor:before {
 	content:"\f154";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-composer:before {
 	content:"\f155";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-zend:before {
 	content:"\f156";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-apache:before {
 	content:"\f157";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-jetty:before {
 	content:"\f158";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-memcached:before {
 	content:"\f159";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-nginx-alt:before {
 	content:"\f15a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-nginx:before {
 	content:"\f15b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-redis:before {
 	content:"\f15c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-tomcat:before {
 	content:"\f15d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-ec3:before {
 	content:"\f15e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-github-circle-alt:before {
 	content:"\f15f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-github-circle:before {
 	content:"\f160";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-github:before {
 	content:"\f161";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-google-code:before {
 	content:"\f162";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-heroku:before {
 	content:"\f163";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-shell-alt:before {
 	content:"\f164";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-shell:before {
 	content:"\f165";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-shellscript:before {
 	content:"\f166";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-opensource:before {
 	content:"\f167";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-bower:before {
 	content:"\f168";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-grunt:before {
 	content:"\f169";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-gulp:before {
 	content:"\f16a";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-selenium:before {
 	content:"\f16b";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-git-squared:before {
 	content:"\f16c";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-git:before {
 	content:"\f16d";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-svn:before {
 	content:"\f16e";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-css-alt:before {
 	content:"\f16f";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-css3-alt:before {
 	content:"\f170";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-css3:before {
 	content:"\f171";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-html5:before {
 	content:"\f172";
-  width: 70px;
+  width: 100%;
 }
 
 .icon-js:before {
 	content:"\f173";
-  width: 70px;
+  width: 100%;
 }

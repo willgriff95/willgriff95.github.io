@@ -6,8 +6,20 @@ $(function(){
     overlayContent = $('.cd-overlay-content'),
     navigation = $('.cd-primary-nav'),
     toggleNav = $('.burgerMenuTrigger');
+  var obj = document.createElement('audio');
 
+  var $fruitFrenzy = $('.fruitFrenzyURLLink');
+  $fruitFrenzy.click(function(){
+    clickSound();
+  });
 
+  function clickSound(){
+    obj.src='./audio/pop.mp3';
+    obj.volume=0.10;
+    obj.autoPlay=false;
+    obj.preLoad=true;
+    obj.play();
+  }
   // $('.main').onepage_scroll({
   //   sectionContainer: 'section',
   //   responsiveFallback: 600,
