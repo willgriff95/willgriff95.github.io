@@ -21,19 +21,39 @@ body {
     padding-top: 60px;
 }
 
+.projects a {
+  padding: 8px 8px 8px 32px;
+}
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    /* padding: 8px 8px 8px 32px; */
     text-decoration: none;
-    font-size: 25px;
+    font-size: 10px;
+        font-weight: normal;
+        font-family: 'Circe';
+        letter-spacing: 3px;
     color: #818181;
     display: block;
     transition: 0.3s;
 }
 
+.bold{
+  font-weight: bold;
+}
 .sidenav a:hover {
+  /* font-weight: bold; */
+    color: #f1f1f1;
+}
+.sidenav a:active {
+  font-weight: bold;
     color: #f1f1f1;
 }
 
+a {
+    color: grey;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -129,47 +149,47 @@ body {
 color: #2ecc71;
 }
 .revuURLLink{
-  font-size: 20px;
+  /* font-size: 20px; */
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .revuURLLink:hover{
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .shiftURLLink{
-  font-size: 20px;
+  /* font-size: 20px; */
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .shiftURLLink:hover{
   color: lightBlue;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .foodletURLLink{
-  font-size: 20px;
+  /* font-size: 20px; */
   color:  white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .foodletURLLink:hover{
   color: greenyellow;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .fruitFrenzyURLLink{
-  font-size: 20px;
+  /* font-size: 20px; */
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .fruitFrenzyURLLink:hover{
   color: #f9c809;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .NavbarText {
@@ -219,17 +239,34 @@ a:hover {
   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
 }
 
-@-webkit-keyframes pulseLinkedIn {
+/* @-webkit-keyframes pulseLinkedIn {
   0% {
     box-shadow: 0 0 0 0 #0077B5; } }
 @keyframes pulseLinkedIn {
   0% {
     box-shadow: 0 0 0 0 #0077B5; } }
-
-
+ */
+ .githubLink{
+   display: inline !important;
+   font-size: 10px !important;
+   /* color: #6e5494 !important; */
+   padding: 10px 10px 10px 0;
+   position: absolute;
+   top: 40px;
+   left: 0;
+ }
+ .linkedInLink {
+     display: inline !important;
+     font-size: 10px !important;
+     /* color: #0077B5 !important; */
+     position: absolute;
+     padding: 10px;
+     top: 40px;
+     left: 95px;
+ }
 .pulseLinkedIn:hover, .pulseLinkedIn:focus {
-  background-color: #0077B5;
-  color: white !important;
+  /* background-color: #0077B5; */
+  color: lightgray !important;
   border: none;
 }
 .textBlack{
@@ -237,59 +274,17 @@ a:hover {
 }
 .pulseLinkedIn {
   background: none;
-  color: #696969;
+  color: #0077B5;
   /* border: 2px solid; */
   font: inherit;
   line-height: 1;
   /* color: white; */
   padding-top: 5px;
   height: 45px;
-  font-size: 20px;
-  width: 45px;
-  border-radius: 50px;
-  margin: 0.5em;
-  /* padding: 1em 2em; */
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  border: none;
-  cursor: pointer;
-  /* -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
-  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09);
-  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.09); */
-}
-
-
-.pulseTwitter:hover,
-.pulseTwitter:focus {
-  -webkit-animation: pulse 0.7s;
-  animation: pulseTwitter 0.7s;
-  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-}
-
-@-webkit-keyframes pulseTwitter {
-  0% {
-    box-shadow: 0 0 0 0 #1DA1F2; } }
-@keyframes pulseTwitter {
-  0% {
-    box-shadow: 0 0 0 0 #1DA1F2; } }
-
-
-.pulseTwitter:hover, .pulseTwitter:focus {
-  background-color: #1DA1F2;
-  color: white !important;
-  border: none;
-}
-
-.pulseTwitter {
-  background: none;
-  color: #696969;
-  /* border: 2px solid; */
-  font: inherit;
-  line-height: 1;
-  /* color: white; */
-  padding-top: 5px;
-  height: 45px;
-  font-size: 20px;
+  font-size: 10px;
+  font-weight: 900;
+  font-family: 'Circe';
+  letter-spacing: 3px;
   width: 45px;
   border-radius: 50px;
   margin: 0.5em;
@@ -319,8 +314,8 @@ a:hover {
 
 
 .pulseEmail:hover, .pulseEmail:focus {
-  background-color: #25d366;
-  color: white !important;
+  /* background-color: #25d366; */
+  color: grey !important;
   border: none;
 }
 
@@ -349,21 +344,24 @@ a:hover {
 
 
 .pulseGithub:hover, .pulseGithub:focus {
-  background-color: #6e5494;
-  color: white !important;
+  /* background-color: #6e5494; */
+  color: lightgray !important;
   border: none;
 }
 
 .pulseGithub {
   background: none;
-  color: #696969;
+  color: #6e5494;
   /* border: 2px solid; */
   font: inherit;
   line-height: 1;
   /* color: white; */
   padding-top: 5px;
   height: 45px;
-  font-size: 20px;
+  font-size: 10px;
+  font-weight: 900;
+  font-family: 'Circe';
+  letter-spacing: 3px;
   width: 45px;
   border-radius: 50px;
   margin: 0.5em;
@@ -384,12 +382,12 @@ a:hover {
   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
 }
 
-@-webkit-keyframes pulseGithub {
+/* @-webkit-keyframes pulseGithub {
   0% {
     box-shadow: 0 0 0 0  #6e5494; } }
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0  #6e5494; } }
+    box-shadow: 0 0 0 0  #6e5494; } } */
 
 
 .whatIam {
@@ -426,7 +424,7 @@ h2 {
   right: -1px; }
 
 .shift {
-  background-image: url('../images/iphone-shift3.svg');
+  background-image: url('../images/shift-background.svg');
   height: 100vh;
   padding: 0 0 100px 100px;
   /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
@@ -472,11 +470,37 @@ h2 {
     /* background-color: white; */
     background-color: #F7F7F7;
     width: 90%;
-    color: white;
+    color: black;
     -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
     -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
     box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
     /* background-color: #212529; */
+}
+a:hover {
+    color: lightgray;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.emailAddress:hover{
+  color: grey !important;
+  /* text-decoration: underline; */
+}
+.emailAddress a{
+  letter-spacing: 0px !important;
+  font-weight: lighter;
+  /* text-decoration: underline; */
+}
+
+.emailAddressPage {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: right;
+    font-size: 30px;
+    line-height:1.4em;
 }
 
 .social{
@@ -697,14 +721,14 @@ h2 {
     font-family: 'Circe';
     letter-spacing: 3px;
     margin-top: 45%;
-    justify-content: center;
-    text-align: center;
-    color: #696969;
+    /* justify-content: center; */
+    /* text-align: center; */
+    color: black;
 }
 
 .subHeaderShift {
   font-size: 10px;
-  color: #6BA4F5;
+  color: white;
   font-weight: normal;
   font-family: 'Circe';
   letter-spacing: 3px;
@@ -717,7 +741,7 @@ h2 {
       letter-spacing: 3px;
       margin-top: 30%;
       color: white;
-      color: greenyellow;
+      color: white;
   }
 .subHeaderFruitFrenzy {
   font-size: 10px;
@@ -881,7 +905,9 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     font-size: 0;
+    position: relative;
     height: 40px;
+    top: -40px;
 }
 .carosel-item {
   display: inline-block;
@@ -1344,27 +1370,70 @@ h2 {
     font-size: 30px;
     display: inline-block;
 }
-
 .carosel-control-left {
     left: 0;
+    z-index: 100;
     top: 20px;
     position: relative;
-
     /* padding: 0px 1px 1px 12px; */
 }
+/* .center{
+  text-align: center;
+  justify-content: center;
+} */
 .carosel-control-right {
       float: right;
       right: 15px;
       position: relative;
       top: -47px;
   }
-
+  .carosel-control-rightGrey {
+      float: right;
+      right: 0;
+      width: 15px;
+      position: relative;
+      top: -60px;
+  }
 .carosel-control:active,
 .carosel-control:hover {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
 }
+.projects{
+  position: relative;
+  left: 40px;
+}
+.contact {
+    position: absolute;
+    left: 10px;
+    bottom: 40px;
+}
+.contact a {
+  font-size: 20px;
+}
 
+
+.title{
+  font-size: 10px;
+    font-weight: normal;
+    font-family: 'Circe';
+    letter-spacing: 3px;
+    justify-content: left;
+    text-align: left;
+    color: white;
+}
+a.title{
+  left: 0;
+  position: relative;
+  padding: 0 !important;
+  font-size: 10px;
+    font-weight: normal;
+    font-family: 'Circe';
+    letter-spacing: 3px;
+    justify-content: left;
+    text-align: left;
+    color: #696969;
+}
 /* .bio {
     background-color: #F8F8F8;
     height: 100vh;
@@ -1393,7 +1462,7 @@ h2 {
   position: absolute;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   /* z-index: 1000; */
   height: 65px;
   -ms-flex-wrap: wrap;
@@ -1434,14 +1503,25 @@ h2 {
   transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
   background: black; }
 
-  .burgerMenu-right {
-      color: black;
-      float: right;
-      position: fixed;
-      right: 10px;
-      top: 25px;
-      z-index: 1000;
-  }
+  .burgerMenuButton {
+    color: black;
+    float: left;
+    position: fixed;
+    left: 0px;
+    top: 25px;
+    z-index: 1000;
+    -webkit-transition:0.5s; // you don't need to specify this again
+
+}
+  .burgerMenuButton.clicked {
+    color: black;
+    float: left;
+    position: fixed;
+    left: 240px;
+    top: 25px;
+    z-index: 1000;
+    -webkit-transition:0.5s; // you don't need to specify this again
+}
   .main-item {
       width: 30px;
       top: 0;

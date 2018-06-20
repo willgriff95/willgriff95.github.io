@@ -13,6 +13,24 @@ $(function(){
     clickSound();
   });
 
+  var clicked = false;
+  var $menu = $('.burgerMenuButton');
+  $menu.click(function(){
+    if(clicked=== false){
+      $('#mySidenav').css('width', '250px');
+      $menu.toggleClass('clicked');
+      $menu.css('color', 'white !important');
+      $('#main').css('marginLeft','250px');
+      return clicked = true;
+    } else {
+      $('#mySidenav').css('width', '0');
+      $menu.toggleClass('clicked');
+      $('#main').css('marginLeft','0');
+      return clicked = false;
+    }
+  });
+
+
   function clickSound(){
     obj.src='./audio/pop.mp3';
     obj.volume=0.10;
@@ -62,6 +80,11 @@ $(function(){
   });
   // console.log(burgerMenuTriggerPressed);
   $('.carosel-control-right').click(function() {
+    $(this).blur();
+    $(this).parent().find('.carosel-item').first().insertAfter($(this).parent().find('.carosel-item').last());
+    // $(this).parent().find('.technologyName').first().insertAfter($(this).parent().find('.technologyName').last());
+  });
+  $('.carosel-control-rightGrey').click(function() {
     $(this).blur();
     $(this).parent().find('.carosel-item').first().insertAfter($(this).parent().find('.carosel-item').last());
     // $(this).parent().find('.technologyName').first().insertAfter($(this).parent().find('.technologyName').last());
