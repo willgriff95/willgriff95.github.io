@@ -199,6 +199,29 @@ justify-content: center;
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 ); }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* android devices */
+  .foodletHeroImage {
+    height: 48%;
+    background-position: bottom; }
+
+  .foodletContent {
+    height: 34%;
+    bottom: 15%;
+    position: absolute;
+    padding: 0 20% 20% 20%; }
+
+  .subHeaderFoodlet {
+    margin-top: 0 !important;
+    font-size: 12px; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .foodletHeroImage {
+    height: 48%;
+    background-position: bottom; }
+
+  .subHeaderFoodlet {
+    margin-top: 0 !important;
+    font-size: 12px; } }
 /* END OF FOODLET CSS */
 .technologyName {
   display: inline-block;
@@ -733,10 +756,35 @@ justify-content: center;
 
 .revuHeroImage {
   background-image: url("../images/revulaptop.svg");
-  background-position: left;
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat; }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* android devices */
+  .revu {
+    padding: 0 !important; }
+
+  .revuHeroImage {
+    height: 55%;
+    background-position: bottom; }
+
+  .revuContent {
+    height: 34%;
+    bottom: 9%;
+    position: absolute;
+    padding: 0 20% 20% 20%; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .revu {
+    padding: 0 !important; }
+
+  .revuHeroImage {
+    height: 55%; }
+
+  .revuContent {
+    height: 34%;
+    bottom: 18%;
+    position: absolute; } }
 /* SHIFT */
 .shiftURLLink {
   /* font-size: 20px; */
@@ -809,6 +857,35 @@ justify-content: center;
   color: white;
   background-color: rgba(240, 240, 241, 0); }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* android devices */
+  .shift {
+    padding: 0 !important; }
+
+  .shiftLink {
+    height: 48%;
+    background-position: bottom; }
+
+  .shiftContent {
+    height: 34%;
+    bottom: 23%;
+    position: absolute;
+    padding: 0 20% 20% 20%; }
+
+  .subHeaderShift {
+    margin-top: 0 !important;
+    font-size: 12px; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .shiftLink {
+    height: 48%;
+    background-position: bottom; }
+
+  .shift {
+    padding: 0 !important; }
+
+  .subHeaderShift {
+    margin-top: 0 !important;
+    font-size: 12px; } }
 /* END OF SHIFT  */
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -951,6 +1028,11 @@ a {
   border-style: none;
   /* width: 850px; */ }
 
+.fruitFrenzyContent {
+  height: 34%;
+  bottom: 15%;
+  position: absolute; }
+
 .fruitFrenzyLink {
   text-decoration: none;
   height: 100%;
@@ -960,6 +1042,43 @@ a {
   background-position: center;
   background-repeat: no-repeat; }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* android devices */
+  .fruitFrenzy2 {
+    padding: 0 !important; }
+
+  .fruitFrenzyLink {
+    height: 52%;
+    background-position: bottom; }
+
+  .fruitFrenzyContent {
+    height: 30%;
+    bottom: 15%;
+    position: absolute;
+    padding: 0 20% 20% 20%; }
+
+  .contentWhite {
+    font-size: 16px !important; }
+
+  .subHeaderFruitFrenzy {
+    margin-top: 0 !important;
+    font-size: 12px; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .fruitFrenzy2 {
+    padding: 0 !important; }
+
+  .fruitFrenzyLink {
+    height: 43%;
+    background-position: center; }
+
+  .subHeaderFruitFrenzy {
+    margin-top: 0 !important;
+    font-size: 12px; }
+
+  .fruitFrenzyContent {
+    height: 34%;
+    bottom: 23%;
+    position: absolute; } }
 /* END OF FRUIT FRENZY CSS */
 .moreContent {
   position: absolute;
@@ -1129,6 +1248,16 @@ h2 {
   letter-spacing: 3px;
   margin-top: 16%; }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* android devices */
+  .aboutMe {
+    padding: 0 !important; }
+
+  .subHeaderAboutME {
+    margin-top: 44%; } }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .aboutMe {
+    padding: 0 !important; } }
 .contact {
   position: absolute;
   left: 10px;

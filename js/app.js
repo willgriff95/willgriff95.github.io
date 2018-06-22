@@ -2,10 +2,7 @@ $(function(){
   AOS.init({
     duration: 1200,
   });
-  var overlayNav = $('.cd-overlay-nav'),
-    overlayContent = $('.cd-overlay-content'),
-    navigation = $('.cd-primary-nav'),
-    toggleNav = $('.burgerMenuTrigger');
+
   var obj = document.createElement('audio');
 
   var $fruitFrenzy = $('.fruitFrenzyURLLink');
@@ -75,9 +72,7 @@ $(function(){
   }
 
 
-  $('.to-the-top').click(function() {
-    $(window).scrollTop(0);
-  });
+
   // console.log(burgerMenuTriggerPressed);
   $('.carosel-control-right').click(function() {
     $(this).blur();
