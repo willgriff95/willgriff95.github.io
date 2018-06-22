@@ -1,26 +1,39 @@
 /*
-Error: File to import not found or unreadable: bourbon.
-        on line 1113 of scss/style.scss
+Error: Undefined mixin 'box-sizing'.
+        on line 1128 of scss/style.scss, in `box-sizing'
+        from line 1128 of scss/style.scss
 
-1108:     color: #000;
-1109:     text-shadow: 0 1px 0 #fff;
-1110:     opacity: .5;
-1111: }
-1112: 
-1113: @import 'bourbon'; // http://bourbon.io/
-1114: 
-1115: @import '../partials/variables'; // colors, fonts etc...
-1116: 
-1117: @import '../partials/mixins'; // custom mixins
-1118: 
+1123: Primary style
+1124: 
+1125: -------------------------------- *\/
+1126: 
+1127: *, *::after, *::before {
+1128: 	@include box-sizing(border-box);
+1129: }
+1130: 
+1131: *::after, *::before {
+1132: 	content: '';
+1133: }
 
 Backtrace:
-scss/style.scss:1113
-/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/import_node.rb:45:in `import'
-/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+scss/style.scss:1128:in `box-sizing'
+scss/style.scss:1128
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:98:in `with_mixin'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/Griff/.rvm/gems/ruby-2.2.5-install/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
@@ -62,4 +75,4 @@ scss/style.scss:1113
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: bourbon.\A         on line 1113 of scss/style.scss\A \A 1108:     color: #000;\A 1109:     text-shadow: 0 1px 0 #fff;\A 1110:     opacity: .5;\A 1111: }\A 1112: \A 1113: @import 'bourbon'; // http://bourbon.io/\A 1114: \A 1115: @import '../partials/variables'; // colors, fonts etc...\A 1116: \A 1117: @import '../partials/mixins'; // custom mixins\A 1118: "; }
+  content: "Error: Undefined mixin 'box-sizing'.\A         on line 1128 of scss/style.scss, in `box-sizing'\A         from line 1128 of scss/style.scss\A \A 1123: Primary style\A 1124: \A 1125: -------------------------------- */\A 1126: \A 1127: *, *::after, *::before {\A 1128: 	@include box-sizing(border-box);\A 1129: }\A 1130: \A 1131: *::after, *::before {\A 1132: 	content: '';\A 1133: }"; }
