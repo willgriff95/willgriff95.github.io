@@ -958,9 +958,7 @@ a {
   background-image: url(../images/fruitFrenzyRespo.svg);
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
-  /* z-index: 100; */
-  margin: 0 auto; }
+  background-repeat: no-repeat; }
 
 /* END OF FRUIT FRENZY CSS */
 .moreContent {
@@ -1324,7 +1322,7 @@ a:hover {
   font-family: 'circe';
   letter-spacing: px;
   line-height: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   padding-top: 25px;
   color: white; }
 
