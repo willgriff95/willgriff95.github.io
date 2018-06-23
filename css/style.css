@@ -1163,6 +1163,9 @@ h2 {
   position: relative;
   /* top: 300px; */ }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .homeContent {
+    padding: 60px; } }
 .subText {
   font-size: 25px;
   font-weight: 400;
@@ -1257,7 +1260,16 @@ h2 {
     margin-top: 44%; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .aboutMe {
-    padding: 0 !important; } }
+    padding: 0 !important; }
+
+  .col-2 {
+    display: none; }
+
+  .iAm {
+    font-size: 25px !important; }
+
+  h2 {
+    font-size: 25px; } }
 .contact {
   position: absolute;
   left: 10px;
