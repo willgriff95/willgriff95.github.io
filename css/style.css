@@ -221,7 +221,10 @@ justify-content: center;
 
   .subHeaderFoodlet {
     margin-top: 0 !important;
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .contentPara2 {
+    display: none; } }
 /* END OF FOODLET CSS */
 .technologyName {
   display: inline-block;
@@ -1172,7 +1175,10 @@ h2 {
     top: 70%; }
 
   .homeContentAbout {
-    display: none; } }
+    display: none; }
+
+  .moreContent {
+    width: calc(100% - 120px); } }
 .subText {
   font-size: 25px;
   font-weight: 400;
@@ -1335,6 +1341,10 @@ h2 {
   /* text-align: center; */
   color: black; }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .emailAddressPage {
+    font-size: 24px;
+    line-height: 1.7em !important; } }
 .line {
   position: absolute;
   height: 2px;
@@ -1411,12 +1421,22 @@ body {
   cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default; }
 
 p {
-  margin-top: 30px;
-  margin-bottom: 1rem; }
+  margin: 0 !important; }
 
 #main {
   transition: margin-left .5s; }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  #main {
+    margin-left: 0 !important; }
+
+  .contentPara2 {
+    display: none; }
+
+  p {
+    margin: 0 !important;
+    font-size: 15px;
+    letter-spacing: 0px; } }
 a:hover {
   color: lightgray;
   text-decoration: none;
