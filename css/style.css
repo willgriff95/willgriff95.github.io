@@ -1165,7 +1165,14 @@ h2 {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .homeContent {
-    padding: 60px; } }
+    padding: 60px; }
+
+  .iAmHomePage {
+    position: relative;
+    top: 70%; }
+
+  .homeContentAbout {
+    display: none; } }
 .subText {
   font-size: 25px;
   font-weight: 400;
