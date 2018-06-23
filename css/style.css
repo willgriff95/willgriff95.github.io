@@ -850,6 +850,9 @@ justify-content: center;
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06); }
 
+.is-mobile {
+  display: none; }
+
 .shiftLink {
   text-decoration: none;
   height: 100%;
@@ -877,7 +880,13 @@ justify-content: center;
 
   .subHeaderShift {
     margin-top: 0 !important;
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .is-not-mobile {
+    display: none; }
+
+  .is-mobile {
+    display: block; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .shiftLink {
     height: 48%;
@@ -888,7 +897,13 @@ justify-content: center;
 
   .subHeaderShift {
     margin-top: 0 !important;
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .is-not-mobile {
+    display: none; }
+
+  .is-mobile {
+    display: block; } }
 /* END OF SHIFT  */
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -1030,11 +1045,6 @@ a {
   vertical-align: middle;
   border-style: none;
   /* width: 850px; */ }
-
-.fruitFrenzyContent {
-  height: 34%;
-  bottom: 15%;
-  position: absolute; }
 
 .fruitFrenzyLink {
   text-decoration: none;
@@ -1178,7 +1188,7 @@ h2 {
     display: none; }
 
   .moreContent {
-    width: calc(100% - 120px); } }
+    width: calc(100% - 120px) !important; } }
 .subText {
   font-size: 25px;
   font-weight: 400;
@@ -1309,8 +1319,8 @@ h2 {
   position: relative;
   left: 0;
   background-color: #F7F7F7;
+  color: #707070;
   width: 90%;
-  color: black;
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06); }
@@ -1415,8 +1425,7 @@ body {
   color: #707070;
   font-family: 'circe';
   font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  font-size: 13px;
   line-height: 2em;
   cursor: -webkit-image-set(url(http://dejan.works/img/cursor1x.png) 1x, url(http://dejan.works/img/cursor2x.png) 2x) 6 6, default; }
 
@@ -1435,8 +1444,13 @@ p {
 
   p {
     margin: 0 !important;
-    font-size: 15px;
+    font-size: 13px;
+    line-height: 2em;
     letter-spacing: 0px; } }
+hr {
+  border: 0;
+  border-top: 1px solid white; }
+
 a:hover {
   color: lightgray;
   text-decoration: none;
@@ -1468,11 +1482,10 @@ a:hover {
   font-size: 12px;
   font-weight: light;
   font-family: 'circe';
-  letter-spacing: 0.5px;
   line-height: 24px;
   padding-bottom: 50px;
   padding-top: 45px;
-  color: #A9A9A9; }
+  color: #707070; }
 
 .contentBlack {
   font-size: 12px;
@@ -1485,7 +1498,7 @@ a:hover {
   color: black; }
 
 .contentWhite {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: light;
   font-family: 'circe';
   letter-spacing: px;
