@@ -1180,7 +1180,8 @@ h2 {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .iAmHomePage {
     position: relative;
-    top: 70%; }
+    top: 70%;
+    left: 10%; }
 
   .homeContentAbout {
     display: none; }
@@ -1483,10 +1484,10 @@ p {
     letter-spacing: 0px; }
 
   #scroll-down {
-    left: 15px !important; }
+    left: 10% !important; }
 
   .cb-intro-more {
-    left: 15px !important; }
+    left: 10% !important; }
 
   .contentWhite {
     padding-top: 0 !important; } }
