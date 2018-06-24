@@ -1,7 +1,51 @@
 $(function(){
   AOS.init({
-    duration: 1200,
+    duration: 1200
   });
+
+  // array with texts to type in typewriter
+  var dataText = [ 'A bit about me...', 'I\'m Looking for a Web Developer role', 'I have UX & UI Design experience', 'Anyway...', 'Check out my work below'];
+
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+
+  setTimeout(function(){
+    function typeWriter (text, i, fnCallback) {
+      // chekc if text isn't finished yet
+      if (i < (text.length)) {
+        // add next character to h1
+        document.querySelector('.iAm').innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          typeWriter(text, i + 1, fnCallback);
+        }, 100);
+      } /* text finished, call callback if there is a callback function */ else if (typeof fnCallback === 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 2000);
+      }
+    }
+
+    // start a typewriter animation for a text in the dataText array
+    function StartTextAnimation(i) {
+      if (typeof dataText[i] ==='undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 20000);
+      }
+      // check if dataText[i] exists
+      if (i < dataText[i].length) {
+        // text exists! start typewriter animation
+        typeWriter(dataText[i], 0, function(){
+          // after callback (and whole text has been animated), start next text
+          StartTextAnimation(i + 1);
+        });
+      }
+    }
+    // setTimeout(typeWriter, 20000);
+    // start the text animation
+    StartTextAnimation(0);
+  }, 1500);
 
   var obj = document.createElement('audio');
 
@@ -36,42 +80,6 @@ $(function(){
     obj.play();
   }
 
-  // $('.main').onepage_scroll({
-  //   sectionContainer: 'section',
-  //   responsiveFallback: 600,
-  //   loop: true
-  // });
-
-  function layerInit(){
-    // var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
-    overlayNav.children('span').velocity({
-      scaleX: 0,
-      scaleY: 0,
-      translateZ: 0
-    }, 50).velocity({
-      height: '1000px',
-      width: '500px',
-      top: '-250px',
-      // border-radius: '0',
-      right: '-350px'
-      // transform: scaleX(1) scaleY(1);
-    }, 0);
-
-    overlayContent.children('span').velocity({
-      scaleX: 0,
-      scaleY: 0,
-      translateZ: 0
-    }, 50).velocity({
-      height: '1000px',
-      width: '500px',
-      // border-radius: '0',
-      top: '-250px',
-      right: '-350px'
-      // transform: scaleX(1) scaleY(1);
-    }, 0);
-  }
-
-
 
   // console.log(burgerMenuTriggerPressed);
   $('.carosel-control-right').click(function() {
@@ -93,75 +101,5 @@ $(function(){
     $(this).toggleClass('transition close');
     // $('.down-bg').slideToggle();
   });
-  const whoAmI = ['I\'m a web developer', 'I design & develop digital products.', 'I am UX enthusiast.', 'I design UI\'s for fun'];
-  let counter = 0;
-  setInterval(function() {
-    $('.iAm').html(whoAmI[counter]);
-    if(counter >= whoAmI.length-1){
-      return counter = 0;
-    }
-    return counter ++;
-  }, 4000);
-
-  //inizialize navigation and content layers
-  layerInit();
-  $(window).on('resize', function(){
-    window.requestAnimationFrame(layerInit);
-  });
-
-  //open/close the menu and cover layers
-  toggleNav.click(function(){
-    if(!toggleNav.hasClass('close-nav')) {
-      //it means navigation is not visible yet - open it and animate navigation layer
-      toggleNav.addClass('close-nav');
-
-      overlayNav.children('span').velocity({
-        translateZ: 0,
-        scaleX: 1,
-        scaleY: 1
-      }, 500, 'easeInCubic', function(){
-        navigation.addClass('fade-in');
-      });
-    } else {
-      //navigation is open - close it and remove navigation layer
-      toggleNav.removeClass('close-nav');
-
-      overlayContent.children('span').velocity({
-        translateZ: 0,
-        scaleX: 1,
-        scaleY: 1
-      }, 500, 'easeInCubic', function(){
-        navigation.removeClass('fade-in');
-
-        overlayNav.children('span').velocity({
-          translateZ: 0,
-          scaleX: 0,
-          scaleY: 0
-        }, 0);
-
-        overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-          overlayContent.children('span').velocity({
-            translateZ: 0,
-            scaleX: 0,
-            scaleY: 0
-          }, 0, function(){
-            overlayContent.removeClass('is-hidden');
-          });
-        });
-        if($('html').hasClass('no-csstransitions')) {
-          overlayContent.children('span').velocity({
-            translateZ: 0,
-            scaleX: 0,
-            scaleY: 0
-          }, 0, function(){
-            overlayContent.removeClass('is-hidden');
-          });
-        }
-      });
-    }
-  });
-
-
-
 
 });
