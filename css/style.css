@@ -819,7 +819,7 @@ justify-content: center;
   font-size: 17px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-top: 10%;
+  margin-top: 25%;
   /* color: #696969; */ }
 
 .technologyNameShift {
@@ -874,7 +874,7 @@ justify-content: center;
 
   .shiftContent {
     height: 34%;
-    bottom: 23%;
+    bottom: 15%;
     position: absolute;
     padding: 0 20% 20% 20%; }
 
@@ -1181,7 +1181,8 @@ h2 {
   .iAmHomePage {
     position: relative;
     top: 70%;
-    left: 6%; }
+    left: 6%;
+    width: 95%; }
 
   .homeContentAbout {
     display: none; }
@@ -1190,7 +1191,14 @@ h2 {
     width: calc(100% - 120px) !important; }
 
   .col-1 {
-    display: none; } }
+    display: none; }
+
+  .iAmWill {
+    width: 95%; }
+
+  .iAm {
+    font-size: 25px !important;
+    width: 95%; } }
 .subText {
   font-size: 25px;
   font-weight: 400;
@@ -1259,6 +1267,7 @@ h2 {
   margin: 0 0.5em;
   position: relative;
   border-radius: 50px;
+  margin-bottom: 25px;
   /* border: solid 1px #F7F7F7; */
   background-size: cover;
   background-position: top;
@@ -1289,9 +1298,6 @@ h2 {
 
   .col-2 {
     display: none; }
-
-  .iAm {
-    font-size: 25px !important; }
 
   h2 {
     font-size: 25px; } }
@@ -1559,13 +1565,14 @@ span {
   color: white; }
 
 .title {
-  font-size: 10px;
-  font-weight: normal;
-  font-family: 'circe';
-  letter-spacing: 3px;
-  justify-content: left;
-  text-align: left;
-  color: white; }
+    font-family: "DIN Condensed",sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    justify-content: left;
+    text-align: left;
+    color: white;
+}
 
 a.title {
   left: 0;
