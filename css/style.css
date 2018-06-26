@@ -1601,7 +1601,11 @@ span {
     line-height: 20px;
     padding-bottom: 0;
     padding-top: 0 !important;
-    color: white; } }
+    color: white; }
+
+  .content {
+    line-height: 20px;
+    font-size: 10px; } }
 .title {
   font-size: 10px;
   font-weight: normal;
