@@ -45,7 +45,7 @@ $(function(){
     // setTimeout(typeWriter, 20000);
     // start the text animation
     StartTextAnimation(0);
-  }, 1500);
+  }, 2000);
 
   var obj = document.createElement('audio');
 
