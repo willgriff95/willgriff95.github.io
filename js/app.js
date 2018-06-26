@@ -4,7 +4,7 @@ $(function(){
   });
 
   // array with texts to type in typewriter
-  var dataText = [ 'A bit about me...', 'I\'m Looking for a Web Developer role', 'I have UX & UI Design experience', 'Anyway...', 'Check out my work below'];
+  var dataText = [ 'A bit about me...', 'I\'m looking for a Web Developer role', 'I have UX & UI Design experience', 'Anyway...', 'Check out my work below'];
 
   // type one text in the typwriter
   // keeps calling itself until the text is finished
