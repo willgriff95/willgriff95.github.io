@@ -196,12 +196,15 @@ justify-content: center;
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 ); }
 
+@media only screen and (max-width: 576px) {
+  .foodlet {
+    padding: 0; } }
 @media only screen and (min-width: 1024px) {
   .subHeaderFoodlet {
     margin-top: 40%; } }
 @media only screen and (max-width: 576px) {
   .foodletHeroImage {
-    height: 50%;
+    height: 46%;
     background-position: bottom; }
 
   .subHeaderFoodlet {
@@ -752,6 +755,12 @@ justify-content: center;
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 ); }
 
+@media only screen and (max-width: 576px) {
+  .revu {
+    padding: 0; }
+
+  .revuHeroImage {
+    height: 50%; } }
 .revuURLLink {
   /* font-size: 20px; */
   color: white;
@@ -775,7 +784,7 @@ justify-content: center;
     padding: 0 !important; }
 
   .revuHeroImage {
-    height: 55%;
+    height: 50%;
     background-position: bottom; }
 
   .revuContent {
@@ -787,11 +796,11 @@ justify-content: center;
     padding: 0 !important; }
 
   .revuHeroImage {
-    height: 55%; }
+    height: 50%; }
 
   .revuContent {
     height: 34%;
-    bottom: 18%;
+    bottom: 17%;
     position: absolute; } }
 /* SHIFT */
 .shiftURLLink {
@@ -855,6 +864,9 @@ justify-content: center;
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06); }
 
+@media only screen and (max-width: 576px) {
+  .shift {
+    padding: 0; } }
 .is-mobile {
   display: none; }
 
@@ -870,7 +882,7 @@ justify-content: center;
 
 @media only screen and (max-width: 576px) {
   .shiftLink {
-    height: 50%; }
+    height: 40%; }
 
   .subHeaderShift {
     margin-top: 5%; } }
@@ -1032,6 +1044,9 @@ a {
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06); }
 
+@media only screen and (max-width: 576px) {
+  .fruitFrenzy2 {
+    padding: 0; } }
 .fruitFrenzyURLLink {
   /* font-size: 20px; */
   color: white;
@@ -1500,8 +1515,6 @@ p {
 
   p {
     margin: 0 !important;
-    font-size: 13px;
-    line-height: 2em;
     letter-spacing: 0px; }
 
   #scroll-down {
@@ -1579,6 +1592,16 @@ span {
   padding-top: 25px;
   color: white; }
 
+@media only screen and (max-width: 576px) {
+  .contentWhite {
+    font-size: 10px;
+    font-weight: light;
+    font-family: 'circe';
+    letter-spacing: px;
+    line-height: 20px;
+    padding-bottom: 0;
+    padding-top: 0 !important;
+    color: white; } }
 .title {
   font-size: 10px;
   font-weight: normal;
