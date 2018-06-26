@@ -183,7 +183,7 @@ justify-content: center;
 
 .foodlet {
   height: 100%;
-  padding: 0 100px 100px 0;
+  padding: 0 50px 50px 0;
   /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
   position: relative;
   /* top: 400px; */
@@ -837,7 +837,7 @@ justify-content: center;
 .shift {
   background-image: url("../images/shift-background.svg");
   height: 100vh;
-  padding: 0 0 100px 100px;
+  padding: 0 0 50px 50px;
   /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
   position: relative;
   /* top: 400px; */
@@ -1005,7 +1005,7 @@ a {
 /* FRUIT FRENZY */
 .fruitFrenzy2 {
   height: 100vh;
-  padding: 0 100px 100px 0;
+  padding: 0 50px 50px 0;
   /* -webkit-transform: translateY(-50px) translateX(0px) rotate(-3deg); */
   position: relative;
   /* top: 400px; */
@@ -1249,7 +1249,7 @@ h2 {
 
 .aboutMe {
   height: 100%;
-  padding: 0 0 0 100px;
+  padding: 0 0 0 50px;
   position: relative;
   left: 0;
   background-color: white;
