@@ -199,6 +199,9 @@ justify-content: center;
   box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67bdf1', endColorstr='#6ba4f5',GradientType=1 ); }
 
+@media only screen and (min-width: 1024px) {
+  .subHeaderFoodlet {
+    margin-top: 40%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* android devices */
   .foodletHeroImage {
@@ -208,8 +211,7 @@ justify-content: center;
   .foodletContent {
     height: 34%;
     bottom: 15%;
-    position: absolute;
-    padding: 0 20% 20% 20%; }
+    position: absolute; }
 
   .subHeaderFoodlet {
     margin-top: 0 !important;
@@ -775,8 +777,7 @@ justify-content: center;
   .revuContent {
     height: 34%;
     bottom: 9%;
-    position: absolute;
-    padding: 0 20% 20% 20%; } }
+    position: absolute; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .revu {
     padding: 0 !important; }
@@ -875,8 +876,7 @@ justify-content: center;
   .shiftContent {
     height: 34%;
     bottom: 15%;
-    position: absolute;
-    padding: 0 20% 20% 20%; }
+    position: absolute; }
 
   .subHeaderShift {
     margin-top: 0 !important;
@@ -1067,7 +1067,7 @@ a {
     height: 30%;
     bottom: 15%;
     position: absolute;
-    padding: 0 20% 20% 20%; }
+    padding: 0 10% 0 10%; }
 
   .contentWhite {
     font-size: 16px !important; }
@@ -1189,9 +1189,6 @@ h2 {
   .moreContent {
     width: calc(100% - 120px) !important; }
 
-  .col-1 {
-    display: none; }
-
   .iAmWill {
     width: 95%; }
 
@@ -1249,11 +1246,11 @@ h2 {
 
 .aboutMe {
   height: 100%;
-  padding: 0 0 0 50px;
+  /* padding: 0 0 0 50px; */
   position: relative;
   left: 0;
   background-color: white;
-  width: 90%;
+  width: 100%;
   color: black;
   -webkit-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.06);
