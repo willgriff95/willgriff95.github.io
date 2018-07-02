@@ -1392,7 +1392,10 @@ h2 {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
   .emailAddressPage {
     font-size: 24px;
-    line-height: 1.7em !important; } }
+    line-height: 1.7em !important; }
+
+  .contactMe {
+    padding: 0 !important; } }
 .line {
   position: absolute;
   height: 2px;
