@@ -65,30 +65,40 @@ justify-content: center;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8); }
 
+.centeredLogos {
+  vertical-align: middle !important;
+  height: 60%; }
+
+.logos {
+  filter: grayscale(100%);
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  padding: 10%; }
+
+.logos:hover {
+  filter: grayscale(0%); }
+
 @media (max-width: 300px) {
   .carosel-item {
-    filter: grayscale(100%);
     width: 100%; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 @media (min-width: 300px) {
   .carosel-item {
-    filter: grayscale(100%);
     width: 50%; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 @media (min-width: 500px) {
   .carosel-item {
-    filter: grayscale(100%);
     width: 33.333%; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 @media (min-width: 768px) {
   .carosel-item {
-    filter: grayscale(100%);
     width: 25%; }
 
   .carosel-itemFruitFrenzy {
