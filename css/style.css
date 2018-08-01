@@ -67,24 +67,28 @@ justify-content: center;
 
 @media (max-width: 300px) {
   .carosel-item {
+    filter: grayscale(100%);
     width: 100%; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 @media (min-width: 300px) {
   .carosel-item {
+    filter: grayscale(100%);
     width: 50%; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 @media (min-width: 500px) {
   .carosel-item {
+    filter: grayscale(100%);
     width: 33.333%; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 @media (min-width: 768px) {
   .carosel-item {
+    filter: grayscale(100%);
     width: 25%; }
 
   .carosel-itemFruitFrenzy {
