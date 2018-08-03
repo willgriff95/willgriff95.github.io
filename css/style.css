@@ -179,7 +179,7 @@ justify-content: center;
 
 .foodletURLLink:hover {
   color: greenyellow;
-  /* font-weight: bold; */
+  font-weight: bold;
   cursor: pointer; }
 
 .subHeaderFoodlet {
@@ -189,7 +189,8 @@ justify-content: center;
   /* font-weight: 700; */
   letter-spacing: 2px;
   margin-top: 25%;
-  /* color: #696969; */ }
+  /* color: #696969; */
+  text-transform: uppercase; }
 
 .foodletImage {
   vertical-align: middle;
@@ -822,23 +823,20 @@ justify-content: center;
     position: absolute; } }
 /* SHIFT */
 .shiftURLLink {
-  /* font-size: 20px; */
   color: white;
-  /* font-weight: bold; */
   cursor: pointer; }
 
 .shiftURLLink:hover {
   color: lightBlue;
-  /* font-weight: bold; */
-  cursor: pointer; }
+  cursor: pointer;
+  font-weight: bold; }
 
 .shiftIconcolor {
   color: #A9A9A9; }
 
 .caroselShift {
   position: relative;
-  color: black;
-  /* top: 40px;  */ }
+  color: black; }
 
 .shiftLogo {
   width: 125px;
@@ -847,12 +845,10 @@ justify-content: center;
 
 .subHeaderShift {
   color: white;
-  /* font-family: "DIN Condensed",sans-serif; */
+  text-transform: uppercase;
   font-size: 25px;
-  /* font-weight: 700; */
   letter-spacing: 2px;
-  margin-top: 25%;
-  /* color: #696969; */ }
+  margin-top: 25%; }
 
 .technologyNameShift {
   display: inline-block;
@@ -1074,7 +1070,8 @@ a {
 .fruitFrenzyURLLink:hover {
   color: #f9c809;
   /* font-weight: bold; */
-  cursor: pointer; }
+  cursor: pointer;
+  font-weight: bold; }
 
 .subHeaderFruitFrenzy {
   color: white;
@@ -1083,6 +1080,7 @@ a {
   /* font-weight: 700; */
   letter-spacing: 2px;
   margin-top: 25%;
+  text-transform: uppercase;
   /* color: #696969; */ }
 
 .fruitFrenzyImage {
