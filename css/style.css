@@ -100,14 +100,18 @@ justify-content: center;
 @media (max-width: 768px) {
   .logosCol {
     display: none !important; } }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .carosel-item {
     width: 25%; }
+
+  #carosel1 {
+    display: none !important; }
 
   .carosel-itemFruitFrenzy {
     width: 33.333%; } }
 .carosel {
-  position: relative; }
+  position: relative;
+  display: block; }
 
 .carosel-inner {
   white-space: nowrap;
