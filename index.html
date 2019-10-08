@@ -464,7 +464,7 @@
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: './data/profile-picture2.json'    
+                    path: './data/fruit-frenzy.json'    
                 });
             	
             </script>
@@ -868,17 +868,18 @@
               const cursor = document.querySelector('.cursor');
               const circle = document.querySelector('.cursor .circle');
               const progressCircle = document.querySelector('.cursor .circle-progress');
-              const dragContainer = document.querySelector('.drag-me-container');
               let clickedEvent = false;
           
           
           
               if ("ontouchstart" in document.documentElement) {
                   // document.write("your device is a touch screen device.");
+                  console.log('touch screen device');
                   document.querySelector('.cursor').setAttribute("style", `display: block`);
               } else {
                   // document.write("your device is NOT a touch device");
                   window.addEventListener('wheel', cursorPositionHandlerScroll);
+                  // const dragContainer = document.querySelector('.drag-me-container');
           
                   function cursorPositionHandlerScroll(event) {
                       const x = event.clientX;  
@@ -893,90 +894,95 @@
                       cursor.setAttribute('style', `transform: translate3d(${x}px, ${y}px, 0px) rotate(-90deg); background: ${setFill ? setFill : 'none'};`);
                       progressCircle.setAttribute('stroke', `${setBorder ? setBorder : 'black'}`);
                       circle.setAttribute('stroke', `${setBorder && setFill ? setBorder : 'lightgray'}`);
-                      dragContainer.setAttribute('style', `${setTooltip ? `display: block; z-index: 1000; transform: translate3d(${x}px, ${y}px, 0px);` : 'display: none;'}`);
+                      // dragContainer.setAttribute('style', `${setTooltip ? `display: block; z-index: 1000; transform: translate3d(${x}px, ${y}px, 0px);` : 'display: none;'}`);
                       
                   };
               }
           
-              document.addEventListener('mousedown', () => {
-                  clickedEvent = true;
-                  circle.setAttribute('r', '18');
-                  progressCircle.setAttribute('r', '18');
-                  circle.setAttribute('stroke-width', '2');
-                  progressCircle.setAttribute('stroke-width', '2');
-              });
-          
-              document.addEventListener('mouseup', () => {
-                  clickedEvent = false;
-                  circle.setAttribute('r', '23.5');
-                  progressCircle.setAttribute('r', '23.5');
-                  circle.setAttribute('stroke-width', '3');
-                  progressCircle.setAttribute('stroke-width', '3');
-              });
-          
-              
-              document.addEventListener('mousemove', e => {        
-                  const x = event.clientX;  
-                  const y = event.clientY; 
-                  const outsideXBoundary = x > window.innerWidth - 50 || x < 50;
-                  const outsideYBoundary = y > window.innerHeight - 50 || y < 50;
-                  const element = document.elementFromPoint(x, y);
-                  const setTooltip = element.dataset.tooltip;
-                  const setBorder = element.dataset.border;
-                  const setFill = element.dataset.fill;
-          
-                  cursor.classList.add('-visible');
-          
-                  if ((outsideXBoundary || outsideYBoundary) && !setBorder) {
-          
-                      cursor.setAttribute('style', `transform: translate3d(${x}px, ${y}px, 0px);`);
-                      circle.setAttribute('r', '23.5');
-                      progressCircle.setAttribute('r', '23.5');
-                      circle.setAttribute('stroke-width', '3');
-                      progressCircle.setAttribute('stroke-width', '3');
-                      cursor.classList.add('-hide');
-          
-                  } else {
-                      cursor.setAttribute('style', `transform: translate3d(${x}px, ${y}px, 0px) rotate(-90deg); background: ${setFill ? setFill : 'none'};`);
-                      progressCircle.setAttribute('stroke', `${setBorder ? setBorder : 'black'}`);
-                      circle.setAttribute('stroke', `${setBorder && setFill ? setBorder : 'lightgray'}`);
-                      circle.setAttribute('r', '23.5');
-                      progressCircle.setAttribute('r', '23.5');
-                      cursor.classList.remove('-hide');
-          
-                      dragContainer.setAttribute('style', `${setTooltip ? `display: block; z-index: 1000; transform: translate3d(${x}px, ${y}px, 0px);` : 'display: none;'}`);
-          
-                      if (clickedEvent) {
-                          circle.setAttribute('r', '18');
-                          progressCircle.setAttribute('r', '18');
-                          circle.setAttribute('stroke-width', '2');
-                          progressCircle.setAttribute('stroke-width', '2');
-                      }
-                  }
-              });
-          
-          
-          
-              document.addEventListener("scroll", (event) => {
-                  const h = document.documentElement;
-                  const bod = document.body;
-                  const st = 'scrollTop';
-                  const sh = 'scrollHeight';
-                  const percent = (h[st]||bod[st]) / ((h[sh]||bod[sh]) - h.clientHeight) * 100;
-                  const circleProgress = document.querySelector('.circle-progress');
-                  const radius = circleProgress.r.baseVal.value;
-                  const circumference = radius * 2 * Math.PI;
-          
-                  circleProgress.style.strokeDasharray = `${circumference} ${circumference}`;
-                  circleProgress.style.strokeDashoffset = `${circumference}`;
-          
-                  setProgress = (percent) => {
-                      const offset = circumference - percent / 100 * circumference;
-                      circleProgress.style.strokeDashoffset = offset;
-                  }
-          
-                  setProgress(percent);
-              });
+              if ("ontouchstart" in document.documentElement) {
+                console.log('touch screen device');
+              } else {  
+                document.addEventListener('mousedown', () => {
+                    clickedEvent = true;
+                    circle.setAttribute('r', '18');
+                    progressCircle.setAttribute('r', '18');
+                    circle.setAttribute('stroke-width', '2');
+                    progressCircle.setAttribute('stroke-width', '2');
+                });
+            
+                document.addEventListener('mouseup', () => {
+                    clickedEvent = false;
+                    circle.setAttribute('r', '23.5');
+                    progressCircle.setAttribute('r', '23.5');
+                    circle.setAttribute('stroke-width', '3');
+                    progressCircle.setAttribute('stroke-width', '3');
+                });
+            
+                
+                document.addEventListener('mousemove', e => {        
+                    const x = event.clientX;  
+                    const y = event.clientY; 
+                    const outsideXBoundary = x > window.innerWidth - 50 || x < 50;
+                    const outsideYBoundary = y > window.innerHeight - 50 || y < 50;
+                    const element = document.elementFromPoint(x, y);
+                    const setTooltip = element.dataset.tooltip;
+                    const setBorder = element.dataset.border;
+                    const setFill = element.dataset.fill;
+                    // const dragContainer = document.querySelector('.drag-me-container');
+
+                    cursor.classList.add('-visible');
+            
+                    if ((outsideXBoundary || outsideYBoundary) && !setBorder) {
+            
+                        cursor.setAttribute('style', `transform: translate3d(${x}px, ${y}px, 0px);`);
+                        circle.setAttribute('r', '23.5');
+                        progressCircle.setAttribute('r', '23.5');
+                        circle.setAttribute('stroke-width', '3');
+                        progressCircle.setAttribute('stroke-width', '3');
+                        cursor.classList.add('-hide');
+            
+                    } else {
+                        cursor.setAttribute('style', `transform: translate3d(${x}px, ${y}px, 0px) rotate(-90deg); background: ${setFill ? setFill : 'none'};`);
+                        progressCircle.setAttribute('stroke', `${setBorder ? setBorder : 'black'}`);
+                        circle.setAttribute('stroke', `${setBorder && setFill ? setBorder : 'lightgray'}`);
+                        circle.setAttribute('r', '23.5');
+                        progressCircle.setAttribute('r', '23.5');
+                        cursor.classList.remove('-hide');
+            
+                        // dragContainer.setAttribute('style', `${setTooltip ? `display: block; z-index: 1000; transform: translate3d(${x}px, ${y}px, 0px);` : 'display: none;'}`);
+            
+                        if (clickedEvent) {
+                            circle.setAttribute('r', '18');
+                            progressCircle.setAttribute('r', '18');
+                            circle.setAttribute('stroke-width', '2');
+                            progressCircle.setAttribute('stroke-width', '2');
+                        }
+                    }
+                });
+            
+            
+            
+                document.addEventListener("scroll", (event) => {
+                    const h = document.documentElement;
+                    const bod = document.body;
+                    const st = 'scrollTop';
+                    const sh = 'scrollHeight';
+                    const percent = (h[st]||bod[st]) / ((h[sh]||bod[sh]) - h.clientHeight) * 100;
+                    const circleProgress = document.querySelector('.circle-progress');
+                    const radius = circleProgress.r.baseVal.value;
+                    const circumference = radius * 2 * Math.PI;
+            
+                    circleProgress.style.strokeDasharray = `${circumference} ${circumference}`;
+                    circleProgress.style.strokeDashoffset = `${circumference}`;
+            
+                    setProgress = (percent) => {
+                        const offset = circumference - percent / 100 * circumference;
+                        circleProgress.style.strokeDashoffset = offset;
+                    }
+            
+                    setProgress(percent);
+                });
+              }
               
           </script>
           
