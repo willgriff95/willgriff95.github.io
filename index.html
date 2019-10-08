@@ -377,13 +377,18 @@
                     <h1 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2"></h1>
                   </div>
               </div>
+              <div role="tablist" class="dots"></div>
             </div>
             
             
             
               <script type="text/javascript">
                 new Glider(document.querySelector('.glider'), {
+                  // Mobile-first defaults
+                  slidesToShow: 0.5,
+                  slidesToScroll: 0.5,
                   draggable: true,
+                  dots: '.dots',
                   responsive: [{
                     // screens greater than >= 775px
                     breakpoint: 775,
@@ -406,6 +411,14 @@
             
             
               <style>
+
+                .glider-dot:hover, .glider-dot:focus, .glider-dot.active {
+                  background: black;
+                }
+                
+                .glider-dots {
+                  padding: 1rem;
+                }
             
                 .career-text {
                   text-align: left;
@@ -662,7 +675,7 @@
             My primary interest is to join a company that is invested in trying
              to hone my skills as a developer whilst also working in a fun environment with likeminded individuals.
              
-              <div class="font-akagi-Pro font-size-body key-code-text" style="text-align: center;">The following projects I have worked as a Web Developer * <div style="background: #F0F0F0; height: 1rem; width: 1rem; position: relative; display: inline-block; border-radius: 100%"></div> </div>
+              <div class="font-akagi-Pro font-size-body key-code-text">The following projects I have worked as a Web Developer * <div style="background: #F0F0F0; height: 1rem; width: 1rem; position: relative; display: inline-block; border-radius: 100%"></div> </div>
              
              </div>
             
@@ -844,7 +857,9 @@
           </svg>
           <div class="drag-me-container">
               <div class="font-akagi-Pro font-weight-bold font-size-small" style="position: relative; text-align:center; color: black; line-height: 100px;" >
+                  <!-- <i class="fas fa-long-arrow-alt-left" style="font-size: 1.2rem; position: absolute; top: 1rem; right: 0; left: 0; margin: 0 auto;"></i>                 -->
                   DRAG ME
+                  <!-- <i class="fas fa-long-arrow-alt-right" style="font-size: 1.2rem; position: absolute; bottom: 1rem; right: 0; left: 0; margin: 0 auto;"></i> -->
               </div>
           </div>
           <script>
