@@ -616,7 +616,7 @@
           </div>
 
           <div class="screen-personal-projects" style="background: #F0F0F0;">
-            <div class="col-10 col-md-10 col-lg-4" style="text-align: center; height: 100%; z-index: 2; margin: 0 auto; padding-top: 100px;">
+            <div class="col-10 col-md-10 col-lg-6" style="text-align: center; height: 100%; z-index: 2; margin: 0 auto;">
               <h6 class="font-akagi-Pro font-weight-thin font-size-small"  style="font-weight: bold">MY WORK</h6>
               <h1 class="font-tisa-Pro font-weight-thin font-size-x-big" >Personal Projects..</h1>
               <div class="font-akagi-Pro   font-size-body" >The following projects were developed whilst I was studying web development at General Assembly in London. Each project spanned over a 2-week period and concluded with a presentation to the class. Everything has been developed by myself using a multitude of different technologies and I loved the experience. Check them out. Tell me what you think. I welcome the feedback!</div>         
@@ -1299,7 +1299,9 @@
             }
 
             .screen-personal-projects {
-              height: 70vh;
+              height: min-content;              
+              padding-top: 10vh;
+              padding-bottom: 10vh;
               margin-top: 10vh;
             }
 
@@ -1333,11 +1335,6 @@
 
               .screen-about-me {
                 height: 100vh;
-              }
-
-              .screen-personal-projects {
-                height: 70vh;
-                margin-top: 0;
               }
             }
 
