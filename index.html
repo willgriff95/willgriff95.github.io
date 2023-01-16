@@ -1,11 +1,13 @@
 <!DOCTYPE html>
     <head>
-        <title>My Portfolio</title>
+        <title>Will Griffiths</title>
         <link rel="stylesheet" href="https://use.typekit.net/jnb2hco.css">
         <script src="./js/lottie.js"></script>
+        <meta charset="UTF-8">
         <script src="https://kit.fontawesome.com/42b4c0f1a0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="./js/smooth-scroll.polyfills.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -14,7 +16,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
         <link href="./css/glider.min.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
         <script src="./js/glider.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./css/glider.css">
         <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src 'self' data:; default-src 'self' http://121.0.0:3000/"> -->
@@ -22,6 +26,12 @@
     <body>
           
           <style>
+            div::selection,
+            img::selection {
+                color: black;
+                background-color: #f0f0f0;
+            }
+            
             .font-akagi-Pro {
               font-family: akagi-pro, sans-serif;
               font-style: normal;
@@ -124,7 +134,7 @@
           </style>          <div class="screen" style="height: 100vh; margin-top: 0;">
             <div class="intro-text">
                 <div class="font-tisa-Pro font-weight-regular font-size-x-big">Hi, I’m Will</div>
-                <div class="font-tisa-Pro font-weight-thin font-size-x-big about-me"></div>
+                <div id="about-me" class="font-tisa-Pro font-weight-thin font-size-x-big about-me"></div>
             </div>
             
             <style>
@@ -137,55 +147,27 @@
             </style>
             
             <script>
-              const dataText = [ 'A bit about me...', 'I\'m a Front-end Web Developer','Currently working for Publicis Sapient', 'I have UX & UI Design experience', 'Check out my work below'];
-            
-              // type one text in the typwriter
-              // keeps calling itself until the text is finished
-            
-              setTimeout(function(){
-                function typeWriter (text, i, fnCallback) {
-                  // chekc if text isn't finished yet
-                  if (i < (text.length)) {
-                    // add next character to h1
-                    document.querySelector('.about-me').innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
-            
-                    // wait for a while and call this function again for next character
-                    setTimeout(function() {
-                      typeWriter(text, i + 1, fnCallback);
-                    }, 100);
-                  } /* text finished, call callback if there is a callback function */ else if (typeof fnCallback === 'function') {
-                    // call callback after timeout
-                    setTimeout(fnCallback, 2000);
-                  }
-                }
-            
-                // start a typewriter animation for a text in the dataText array
-                function StartTextAnimation(i) {
-                  if (typeof dataText[i] ==='undefined'){
-                    setTimeout(function() {
-                      StartTextAnimation(0);
-                    }, 20000);
-                  }
-                  // check if dataText[i] exists
-                  if (dataText[i] && i < dataText[i].length) {
-                    // text exists! start typewriter animation
-                    typeWriter(dataText[i], 0, function(){
-                      // after callback (and whole text has been animated), start next text
-                      StartTextAnimation(i + 1);
-                    });
-                  }
-                }
-                // setTimeout(typeWriter, 20000);
-                // start the text animation
-                StartTextAnimation(0);
-              }, 2000);
+              document.addEventListener("DOMContentLoaded", function () {
+                new TypeIt("#about-me", {
+                  speed: 75,
+                })
+                .type('I\'m a Senior Front-end Developer').pause(500)
+                .delete(null, { instant: true }) // Delete everything instantly.
+                .type('and I\'m currently freelancing').pause(500)
+                .delete(null, { instant: true }) // Delete everything instantly.
+                .type('Want to discuss an opportunity?').pause(500)
+                .delete(null, { instant: true }) // Delete everything instantly.
+                .type('Let\'s do it!').pause(500)
+                .delete(null, { instant: true }) // Delete everything instantly.
+                .type('Connect with me on <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/willgriff">LinkedIn</a> or <a target="_blank" rel="noopener noreferrer" href="mailto:will.a.griffiths@gmail.com?subject=Hello!">email</a> 🙂').pause(500)
+                .go();
+              });
+
             
             </script>
             <div class="col-8 col-md-5 col-lg-4" id="profilePicture">
                 <img class="profilePicture" src="./images/me.png"/>
             </div>
-            
-            
             <script>
                 bodymovin.loadAnimation({
                     wrapper: document.getElementById('profilePicture'),
@@ -227,6 +209,7 @@
                 #profilePicture {
                     margin: 0 auto;
                     top: 32%;
+                    z-index: -1;
                 }
             
             
@@ -248,27 +231,29 @@
                 @media (min-width: 768px) { 
                     #profilePicture {
                         top: 20%;
+                        /*  */
                         max-width: 380px;
                     }
                  }
-            
-            </style>            <ul class="social-buttons">
+                 
+            </style>            
+              <ul class="social-buttons animated slideInRight delay-1s">
                 <li class="">
                     <a href="https://www.linkedin.com/in/willgriff/" data-border="#0077B5" data-fill="#0077B5" class="fab fa-linkedin-in">
                         <p class="font-akagi-Pro font-weight-bold font-size-small social-icon-text" >LINKEDIN</p>
                     </a>
                 </li>
-                <li class="">
+                <!-- <li class="">
                     <a href="https://www.facebook.com/Will.Alan.Griffiths" data-border="#3C5A99" data-fill="#3C5A99" class="fab fa-facebook-f">
                         <p class="font-akagi-Pro font-weight-bold font-size-small social-icon-text" >FACEBOOK</p>
                     </a>
-                </li>
+                </li> -->
                 <li class="">
                     <a href="mailto:will.a.griffiths@gmail.com" data-border="#DB4437" data-fill="#DB4437" class="far fa-envelope">
                         <p class="font-akagi-Pro font-weight-bold font-size-small social-icon-text" >GMAIL</p>
                     </a>
                 </li>
-            </ul>
+              </ul>
             
             <style>
                 .social-buttons {
@@ -348,30 +333,96 @@
             
                 
             </style>          </div>
-          <div class="font-akagi-Pro font-weight-bold font-size-small work-history-text" style="position: relative; text-align:left; padding-left: 10%; color: #efefef;" >WORK HISTORY</div>
+          <div class="font-akagi-Pro font-weight-bold font-size-small work-history-text animated slideInUp delay-2s" style="position: relative; text-align:left; padding-left: 10%; color: #efefef;" >WORK HISTORY</div>
           <div class="screen" style="background: #EFEFEF; height: 100%; z-index: 2; margin-top: 0">
             
             <div class="glider-contain"  data-tooltip="Drag to scroll" data-fill="red" data-border="red">
               <div class="glider"  data-tooltip="Drag to scroll" >
-                  <div class="career-text"  data-tooltip="Drag to scroll" >
-                    <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">APRIL 2019 - PRESENT</h6>
-                    <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Publicis Sapient</h1>
-                    <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Lloyds Bank</h1>
-                    
-                    <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Currently working for Lloyds bank consumer onboarding user journeys. The role includes picking up the more complex of UI tickets such as a bespoke circular slider for touch screen devices. An auto-suggestion component that can accept miss-spellings, other languages and similar synonyms to suggest the correct reference. The technologies include React.js (all versions) with Hooks implementation and Redux.</div>
+                <div class="career-text"  data-tooltip="Drag to scroll" >
+                  <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">
+                    FEB 2022 - PRESENT
+                  </h6>
+                  <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Hundo</h1>
+                  <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Tech Lead</h1>
+                  <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">
                   </div>
-                  <div class="career-text"  data-tooltip="Drag to scroll" >
-                    <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">NOVEMBER 2018 - APRIL 2019</h6>
-                    <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Publicis Sapient</h1>
-                    <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Debenhams</h1>
-                    <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Debenhams account included broadening their current Mobify PWA to scale for a desktop application. Directly developing new functionalities such as mini-bag which were shown to massively increase transactional progressions by improved user experience. This was later recognised for a UX 2019 award. The technologies used were React.js with Redux.</div>
+                  <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">
+                    <ul>
+                      <li><p>
+                        Provided consulting expertise to improve site performance; reducing all first load JavaScript files by approximately 50% which directly improved server-side load times by 45%.
+                      </p></li>
+                      <li><p>
+                        Leading scrum and product/tech conversations on stand-ups so we were able to effectively communicate deliverables and promote collaboration amongst the team. This saw the team complete development tasks one sprint (two weeks) before the deadline and also complete 75% of our allocated stretch goals.
+                      </p></li>
+                    </ul>
                   </div>
-                  <div class="career-text"  data-tooltip="Drag to scroll" >
-                    <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">SEPTEMBER 2018 - NOVEMBER 2018</h6>
-                    <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Publicis Sapient</h1>
-                    <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Unilever</h1>
-                    <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Developed an internal tool that provided marketing campaign tagging to users across all brands, meaning that employees could understand campaign metrics clearly and comprehensively. Developing each component in storybooks to provide easier integration and comprehension. The technologies used were typescript react, storybook and materialUI.</div>
+                </div>
+                <div class="career-text"  data-tooltip="Drag to scroll" >
+                  <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">
+                    SEP 2021 - FEB 2022
+                  </h6>
+                  <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">KPMG</h1>
+                  <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Lead Front End Developer  </h1>
+                  
+                  <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">
+                    <ul>
+                      <li>
+                        <p>
+                        Responsible for FE repositories, deployments, packages, vulnerabilities, CI/CD, and enforced coding standards within a team of two other developers thus saving 6 days of tech debt.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Modernised technologies through continuous improvement leading to a 20% reduction in tech debt.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Took the initiative to remove Survey.js (v1.8.68) and redevelop our own React.js equivalent within 2 days. This meant the team were able to more efficiently style and handle state between components which resulted in saving a week dev time.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Redeveloped accessibility to meet a high level of compliance (WCAG2 Level AA) and held a workshop for our Engineering team internally on how to meet the minimum level of compliance (WCAG2 Level A).
+                        </p>
+                      </li>
+                    </ul>
                   </div>
+                </div>
+                <div class="career-text"  data-tooltip="Drag to scroll" >
+                  <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">
+                    JAN 2019 - SEP 2021 
+                  </h6>
+                  <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">PWC</h1>
+                  <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Full Stack Developer</h1>
+                  
+                  <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">
+                    <ul>
+                      <li><p>
+                        Increased user engagement 20% on projects by improving overall performance.
+                      </p></li>
+                      <li><p>
+                        Established the coding standards, enforced unit testing, linting and reduced tech-debts.
+                      </p></li>
+                      <li><p>
+                        Assigned a leadership role in the project, this meant I managed the frontend team, assigned responsibilities and provided mentorship.
+                      </p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="career-text"  data-tooltip="Drag to scroll" >
+                  <h6 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2" style="font-weight: bold">
+                    JUN 2019 - JAN 2020
+                  </h6>
+                  <h1 class="font-tisa-Pro font-weight-regular font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Publicis Sapient</h1>
+                  <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">Lloyds Bank</h1>
+                  
+                  <div class="font-akagi-Pro   font-size-body"  data-tooltip="Drag to scroll"  data-border="#36c0f2">
+                    <p>
+                      Developed a proof of concept for an infinite circular slider being the first of its kind and replacing the linear slider on mobile devices for consumer onboarding journeys. HotJar insights concluded a 15% reduction in completion time and 9% increase in conversions.
+                    </p>
+                  </div>
+                </div>                 
                   <div class="career-text"  data-tooltip="Drag to scroll" >
                     <h1 class="font-tisa-Pro font-weight-thin font-size-x-big"  data-tooltip="Drag to scroll"  data-border="#36c0f2">What's next?</h1>
                     <h1 class="font-akagi-Pro font-weight-thin font-size-small"  data-tooltip="Drag to scroll"  data-border="#36c0f2"></h1>
@@ -443,70 +494,66 @@
 
             
           <div class="screen screen-about-me">
-              <div class="about-me-main-text font-size-body col-10 col-md-10 col-lg-6">
+              <div class="about-me-main-text font-size-body col-10 col-md-10 col-lg-6 animated slideInLeft delay-2s">
                   <div class="font-tisa-Pro font-weight-regular font-size-x-big" >About Me</div>
                   <div class="font-akagi-Pro   font-size-body" >
-              Having achieved a Bachelor of Arts in Industrial Design, I felt proficient in my abilities to produce 
-              aesthetically pleasing and usable UI designs, however I didn’t find it challenged me on an intellectual 
-              level. I felt I would be better suited to work that required practical thinking. Having set up a freelance 
-              company whilst at University as a means of income I was designing and developing static web pages with basic 
-              javascript, html and css. From there I developed my skills and I found that the pragmatism and creativity 
-              within web development challenged me in a fulfilling way.
-              </br>
-              </br>
-              My primary interest is to join a company that is invested in trying
-               to hone my skills as a developer whilst also working in a fun environment with likeminded individuals.
-               
-                <div class="font-akagi-Pro font-size-body key-code-text">Working as a Web Developer * <i style="color: #F0F0F0;" class="fas fa-circle"></i> </div>
-               
+                    <p>
+                      As a Senior Front-end Developer with over five years of experience in the web development industry, I possess a breadth of knowledge and skills in responsive web design, web application development, reusable component creation, accessibility, and user experience enhancements. I have been involved in all stages of the project lifecycle, from gathering business requirements to project completion. Furthermore, I have led teams for the past three years. I have successfully implemented strategies that have resulted in a 20% reduction in code development time through continuous improvements and code quality insights.    
+                    </p>
                </div>
               
               </div>
               
               <div class="col-12 col-md-12 col-lg-6 " id="aboutMeMain">
-                <a href="https://www.unilever.com">
-                  <img class="logos"  src="./images/logo-20.svg" style="background: #F0F0F0; border-radius: 100%"/>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.pwc.co.uk/">
+                  <img class="logos"  src="./images/logo-23.svg"/>
                 </a>
-                <a href="https://www.lloydsbank.com/" >
-                  <img class="logos" src="./images/logo-21.svg" style="background: #F0F0F0;  border-radius: 100%"/>
+                <a target="_blank" rel="noopener noreferrer" href="https://home.kpmg/xx/en/home.html">
+                  <img class="logos"  src="./images/logo-24.svg"/>
                 </a>
-                <a href="https://www.debenhams.com/" >
-                  <img class="logos" src="./images/logo-22.svg" style="background: #F0F0F0; border-radius: 100%"/>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.debenhams.com/">
+                  <img class="logos"  src="./images/logo-20.svg"/>
                 </a>
-                <a href="https://www.jaguar.co.uk/index.html">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.lloydsbank.com/" >
+                  <img class="logos" src="./images/logo-21.svg"/>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.unilever.com" >
+                  <img class="logos" src="./images/logo-22.svg"/>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.jaguar.co.uk/index.html">
                   <img class="logos"  src="./images/logo-01.svg" />
                 </a>
-                <a href="https://www.formula1.com/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.formula1.com/">
                   <img class="logos" src="./images/logo-02.svg" />
                 </a>
-                <a href="http://www.fiaformulae.com/en">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.fiaformulae.com/en">
                   <img class="logos" src="./images/logo-03.svg" />
                 </a>
-                <a href="https://www.lexus.co.uk/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.lexus.co.uk/">
                   <img class="logos"  src="./images/logo-04.svg" />
                 </a>
-                <a href="https://www.fiat.co.uk/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.fiat.co.uk/">
                   <img class="logos"  src="./images/logo-05.svg" />
                 </a>
-                <a href="https://www.redbull.com/gb-en/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.redbull.com/gb-en/">
                   <img class="logos"  src="./images/logo-06.svg" />
                 </a>
-                <a href="https://www.jeep.co.uk/" >
+                <a target="_blank" rel="noopener noreferrer" href="https://www.jeep.co.uk/" >
                   <img class="logos" src="./images/logo-07.svg" />
                 </a>
-                <a href="https://www.autodesk.co.uk/" >
+                <a target="_blank" rel="noopener noreferrer" href="https://www.autodesk.co.uk/" >
                   <img class="logos" src="./images/logo-08.svg" />
                 </a>
-                <a href="https://global.astonmartin.com/en-gb/" >
+                <a target="_blank" rel="noopener noreferrer" href="https://global.astonmartin.com/en-gb/" >
                   <img class="logos" src="./images/logo-09.svg" />
                 </a>
-                <a href="https://www.rugbyworldcup.com/" >
+                <a target="_blank" rel="noopener noreferrer" href="https://www.rugbyworldcup.com/" >
                   <img class="logos" src="./images/logo-10.svg" />
                 </a>
-                <a href="https://www.donjulio.com/">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.donjulio.com/">
                   <img class="logos" src="./images/logo-11.svg" />
                 </a>
-                <a href="http://www.thefa.com/">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.thefa.com/">
                   <img class="logos" src="./images/logo-12.svg" />
                 </a>
                         <!-- <img class="logos" src="./images/logo-13.svg" /> -->
@@ -614,237 +661,6 @@
               
             
           </div>
-
-          <div class="screen-personal-projects" style="background: #F0F0F0;">
-            <div class="col-10 col-md-10 col-lg-6" style="text-align: center; height: 100%; z-index: 2; margin: 0 auto;">
-              <h6 class="font-akagi-Pro font-weight-thin font-size-small"  style="font-weight: bold">MY WORK</h6>
-              <h1 class="font-tisa-Pro font-weight-thin font-size-x-big" >Personal Projects..</h1>
-              <div class="font-akagi-Pro   font-size-body" >The following projects were developed whilst I was studying web development at General Assembly in London. Each project spanned over a 2-week period and concluded with a presentation to the class. Everything has been developed by myself using a multitude of different technologies and I loved the experience. Check them out. Tell me what you think. I welcome the feedback!</div>         
-            </div>
-          </div>
-  
-  
-
-          <div class="screen screen-fruit-frenzy" data-border="#36c0f2">
-            <div class="col-8 col-md-8 col-lg-5" id="fruitFrenzy" data-border="#36c0f2">
-                <a href="http://www.willgriff.co.uk/Fruit-Frenzy" >
-                    <img href="#" class="fruitFrenzy" src="./images/fruit-frenzy.png" data-border="#36c0f2"/>
-                </a>
-            </div>
-            
-            <div class="fruit-frenzy-text font-size-body col-10 col-md-10 col-lg-5">
-                <div class="font-tisa-Pro font-weight-regular font-size-x-big" data-border="#36c0f2">Fruit Frenzy</div>
-                <div class="font-tisa-Pro font-weight-thin font-size-x-big" data-border="#36c0f2">Interactive Game</div>
-                <div class="font-akagi-Pro   font-size-body" data-border="#36c0f2">
-                    Fruit Frenzy was my first project at General Assembly. The UI was developed by myself with inspiration taken from the game Candy Crush. Initially it was meant to be developed with the same gaming functionality as Candy Crush but as this was my first time utilising heavy JavaScript, I decided to make it a reactions game instead. This allowed me to manage the scalability and focus on ensuring the fundamentals were executed correctly within the time frame.
-            </div>
-            </div>
-            
-            <script>
-                bodymovin.loadAnimation({
-                    wrapper: document.getElementById('fruitFrenzy'),
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: './data/fruit-frenzy.json'    
-                });
-            	
-            </script>
-            
-            <style>
-                #fruitFrenzy {
-                    position: relative;
-                    top: 0;
-                    left: -20%;
-                }
-            
-                .fruitFrenzy {
-                    position: absolute;
-                    height: 100%;
-                    cursor: pointer;
-                    left: 33%;
-                    margin: 0 auto;
-                    z-index: 1;
-                }
-            
-                .fruit-frenzy-text {
-                    position: relative;
-                    top: 0;
-                    right: unset;
-                    margin: 0 auto;
-                    text-align: left;
-                }
-            
-                /** Medium devices .col-md-  (tablets, 768px and up) */
-                @media (min-width: 992px) { 
-                    .fruit-frenzy-text {
-                        position: absolute;
-                        top: 15%;
-                        right: 0;
-                        padding: 5%;
-                        text-align: left;
-                    }
-                        
-                    #fruitFrenzy {
-                        position: absolute;
-                        top: 25%;
-                        left: -20%;
-                    }
-                }
-            </style>
-            
-          </div>
-
-          <div class="screen" data-border="#89b832">
-            <div class="col-10 col-md-8 col-lg-6" id="foodlet" data-border="#89b832">
-                <a href="https://foodlet.herokuapp.com/#!/">
-                    <img class="foodlet" src="./images/foodlet-screens.svg" data-border="#89b832"/>
-                </a>
-            </div>
-            
-            <div class="foodlet-text col-10 col-md-10 col-lg-6 font-size-body">
-                <div class="font-tisa-Pro font-weight-regular font-size-x-big" data-border="#89b832">Foodlet</div>
-                <div class="font-tisa-Pro font-weight-thin font-size-x-big" data-border="#89b832">Web Application</div>
-                <div class="font-akagi-Pro font-size-body" data-border="#89b832">Foodlet is a food waste prevention app. It is used as a means to share food that would otherwise be disposed of. Working in a group of 3 we produced this MEAN stack app with all RESTful routes, utilising Google Maps API and AngularJS as the front-end framework.
-            </div>
-            </div>
-            
-            <script>
-                bodymovin.loadAnimation({
-                    wrapper: document.getElementById('foodlet'),
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: './data/foodlet.json'
-                });
-            
-                function cursorPositionHandler(e) {
-                    var decimalX = e.clientX / window.innerWidth - 0.5;
-                    var decimalY = e.clientY / window.innerHeight - 0.5;
-                    TweenMax.to(fruitFrenzy, 0.5, { rotationY: 24 * decimalX, rotationX: 24 * decimalY, ease: Quad.easeOut, transformPerspective: 700, transformOrigin: "center" });
-                }
-                    
-            </script>
-            
-            <style>
-                #foodlet {
-                    position: absolute;
-                    top: 0;
-                    right: -15%;
-                }
-            
-                .foodlet {
-                    position: absolute;
-                    height: 100%;
-                    right: 0;
-                    margin: 0 auto;
-                    z-index: 1;
-                    cursor: pointer;
-                }
-            
-                .foodlet-text {
-                    position: relative;
-                    top: 35%;
-                    text-align: left;
-                    margin: 0 auto;
-                }
-            
-                /* Desktops and laptops ----------- */
-                @media (min-width : 768px) {
-                    .foodlet-text {
-                        padding: 5%;
-                        left: 0;
-                        position: absolute;
-                        top: 34%;
-                    }
-            
-                }
-            
-                /** Medium devices .col-md-  (tablets, 768px and up) */
-                @media (min-width: 992px) { 
-                    .foodlet-text {
-                        position: relative;
-                        top: 10%;
-                        text-align: left;
-                        margin: 0;
-                    }
-                }
-            
-            
-            </style>
-          </div>
-          <div class="screen screen-shift" style="margin-top: 0;" data-border="#6e89f8">
-            <div class="col-9 col-md-7 col-lg-5" data-border="#6BA0F5" id="shift">
-                <a href="https://sh1ft.herokuapp.com/">
-                    <img class="shift" src="./images/shift.png" data-border="#6BA0F5"/>
-                </a>
-            </div>
-            
-            <div class="shift-text col-10 col-md-10 col-lg-5 font-size-body" data-border="#6BA0F5">
-                <div class="font-tisa-Pro font-weight-regular font-size-x-big"  data-border="#6BA0F5">Shift</div>
-                <div class="font-tisa-Pro font-weight-thin font-size-x-big" data-border="#6BA0F5" >Web Application</div>
-                <div class="font-akagi-Pro   font-size-body" data-border="#6BA0F5">
-                    Shift is an app to link freelancers with hiring managers in an accessible way. Eliminating the middleman, referrals are directly available on all user profiles with an average star rating and comment section. These review systems are only available after a job has been accepted; allowing only those that have interacted to review one another. This creates a greater transparency for other users when assessing a candidate or an employer.
-                    </br>
-                </div>
-            </div>
-            
-            <script>
-                bodymovin.loadAnimation({
-                    wrapper: document.getElementById('shift'),
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: './data/shift.json'
-                });
-            
-                function cursorPositionHandler(e) {
-                    var decimalX = e.clientX / window.innerWidth - 0.5;
-                    var decimalY = e.clientY / window.innerHeight - 0.5;
-                    TweenMax.to(fruitFrenzy, 0.5, { rotationY: 24 * decimalX, rotationX: 24 * decimalY, ease: Quad.easeOut, transformPerspective: 700, transformOrigin: "center" });
-                }
-                    
-            </script>
-            
-            <style>
-                #shift {
-                    position: relative;
-                    top: 0;
-                    left: -10%;
-                }
-            
-                .shift {
-                    position: absolute;
-                    height: 100%;
-                    left: 33%;
-                    margin: 0 auto;
-                    z-index: 1;
-                    cursor: pointer;
-                }
-            
-                .shift-text {
-                    position: relative;
-                    text-align: left;
-                    margin: 0 auto;
-                }
-            
-                /** Medium devices .col-md-  (tablets, 768px and up) */
-                @media (min-width: 992px) { 
-                    .shift-text {
-                        position: absolute;
-                        text-align: left;
-                        top: 0;
-                        right: 0;
-                        margin: 0 auto;
-                        padding: 5%;
-                    }
-                }
-            
-            
-            </style>          
-            
-          </div>
-          
           <svg
               class="cursor"
               style="display: none"
@@ -1078,11 +894,11 @@
                           <p class="font-akagi-Pro font-weight-bold font-size-small social-icon-text" >LINKEDIN</p>
                       </a>
                   </li>
-                  <li class="social-footer-icon">
+                  <!-- <li class="social-footer-icon">
                       <a href="https://www.facebook.com/Will.Alan.Griffiths" data-border="#3C5A99" data-fill="#3C5A99" class="fab fa-facebook-f">
                           <p class="font-akagi-Pro font-weight-bold font-size-small social-icon-text" >FACEBOOK</p>
                       </a>
-                  </li>
+                  </li> -->
                   <li class="social-footer-icon">
                       <a href="mailto:will.a.griffiths@gmail.com" data-border="#DB4437" data-fill="#DB4437" class="far fa-envelope">
                           <p class="font-akagi-Pro font-weight-bold font-size-small social-icon-text" >GMAIL</p>
@@ -1269,18 +1085,18 @@
 
             .screen {
               overflow: hidden;
-              height: 100vh;
+              height: 100%;
               width: 100vw;
               position: relative;
               margin-top: 5rem;
             }
 
             .screen-fruit-frenzy {
-              height: 105vh;
+              height: 100%;
             }
 
             .screen-shift {
-              height: 110vh;
+              height: 100%;
             }
 
             .work-history-text {
@@ -1294,12 +1110,12 @@
             }
 
             .screen-about-me {
-              height: 150vh;
+              height: 100%;
               margin-top: 10vh;
             }
 
             .screen-personal-projects {
-              height: min-content;              
+              height: 100%;              
               padding-top: 10vh;
               padding-bottom: 10vh;
               margin-top: 10vh;
