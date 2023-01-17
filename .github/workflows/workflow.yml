@@ -17,6 +17,6 @@ jobs:
           aws-region: eu-west-2
       - name: Copy to s3
         run: aws s3 sync ./ s3://www.willgriffiths.co
-        run: aws s3 sync ./ s3://willgriffiths.co
-        run: aws s3 sync ./ s3://www.willgriff.co.uk
-        run: aws s3 sync ./ s3://willgriff.co.uk
+          aws s3 sync ./ s3://willgriffiths.co
+          aws s3 sync ./ s3://www.willgriff.co.uk
+          aws s3 sync ./ s3://willgriff.co.uk
