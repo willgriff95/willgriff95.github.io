@@ -15,9 +15,10 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-2
-      - name: Copy to s3
+      - name: Copy to s3 www.willgriffiths.co
+        run: aws s3 sync ./ s3://www.willgriffiths.co
+      - name: Copy to s3 willgriffiths.co
         run:
-          aws s3 sync ./ s3://www.willgriffiths.co
           aws s3 sync ./ s3://willgriffiths.co
           # aws s3 sync ./ s3://www.willgriff.co.uk
           # aws s3 sync ./ s3://willgriff.co.uk
